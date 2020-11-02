@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		434962B325502A6700BC4077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B225502A6700BC4077 /* AppDelegate.swift */; };
 		434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B425502A6700BC4077 /* SceneDelegate.swift */; };
-		434962B725502A6700BC4077 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B625502A6700BC4077 /* ViewController.swift */; };
+		434962B725502A6700BC4077 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B625502A6700BC4077 /* HomeViewController.swift */; };
 		434962BA25502A6700BC4077 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434962B825502A6700BC4077 /* Main.storyboard */; };
 		434962BC25502A6800BC4077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434962BB25502A6800BC4077 /* Assets.xcassets */; };
 		434962BF25502A6800BC4077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434962BD25502A6800BC4077 /* LaunchScreen.storyboard */; };
 		434962CA25502A6800BC4077 /* BeeStrongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962C925502A6800BC4077 /* BeeStrongTests.swift */; };
 		434962D525502A6800BC4077 /* BeeStrongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962D425502A6800BC4077 /* BeeStrongUITests.swift */; };
+		434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962EF2550503B00BC4077 /* CalenderViewController.swift */; };
+		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
+		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,7 @@
 		434962AF25502A6700BC4077 /* BeeStrong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeStrong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434962B225502A6700BC4077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		434962B425502A6700BC4077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		434962B625502A6700BC4077 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		434962B625502A6700BC4077 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		434962B925502A6700BC4077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		434962BB25502A6800BC4077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434962BE25502A6800BC4077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		434962D025502A6800BC4077 /* BeeStrongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeStrongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434962D425502A6800BC4077 /* BeeStrongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeStrongUITests.swift; sourceTree = "<group>"; };
 		434962D625502A6800BC4077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		434962EF2550503B00BC4077 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
+		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +153,10 @@
 		434962E8255033AD00BC4077 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				434962B625502A6700BC4077 /* ViewController.swift */,
+				434962B625502A6700BC4077 /* HomeViewController.swift */,
+				434962EF2550503B00BC4077 /* CalenderViewController.swift */,
+				434962F72550506700BC4077 /* WorkoutsViewController.swift */,
+				434962FC255052C200BC4077 /* ProcessViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -282,7 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434962B725502A6700BC4077 /* ViewController.swift in Sources */,
+				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
+				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
+				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
+				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
 			);
