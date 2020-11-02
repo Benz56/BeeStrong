@@ -18,6 +18,7 @@
 		434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962EF2550503B00BC4077 /* CalenderViewController.swift */; };
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
+		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		434962EF2550503B00BC4077 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
+		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		434962E72550339E00BC4077 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 			files = (
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
+				4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */,
 				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,

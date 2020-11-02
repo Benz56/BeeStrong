@@ -7,7 +7,24 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    let model = ["a", "b", "c", "d"] // Test.
+    
+    @IBOutlet weak var upcomingWorkoutsTableView: UITableView!
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return model.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell") as! HomeTableViewCell
+        
+        cell.dateLabel.text = model[indexPath.row]
+        cell.trainingSessionTitleLabel.text = model[indexPath.row]
+        
+        return cell
+    }
     
     @IBAction func onCalenderTouched(_ sender: UIButton) {
         self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first(where: {$0 is CalenderViewController})
@@ -28,6 +45,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        upcomingWorkoutsTableView.delegate = self
+        upcomingWorkoutsTableView.dataSource = self
     }
     
     
