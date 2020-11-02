@@ -99,9 +99,11 @@
 		434962B125502A6700BC4077 /* BeeStrong */ = {
 			isa = PBXGroup;
 			children = (
+				434962E8255033AD00BC4077 /* Controllers */,
+				434962E72550339E00BC4077 /* Views */,
+				434962E62550334500BC4077 /* Models */,
 				434962B225502A6700BC4077 /* AppDelegate.swift */,
 				434962B425502A6700BC4077 /* SceneDelegate.swift */,
-				434962B625502A6700BC4077 /* ViewController.swift */,
 				434962B825502A6700BC4077 /* Main.storyboard */,
 				434962BB25502A6800BC4077 /* Assets.xcassets */,
 				434962BD25502A6800BC4077 /* LaunchScreen.storyboard */,
@@ -126,6 +128,28 @@
 				434962D625502A6800BC4077 /* Info.plist */,
 			);
 			path = BeeStrongUITests;
+			sourceTree = "<group>";
+		};
+		434962E62550334500BC4077 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		434962E72550339E00BC4077 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		434962E8255033AD00BC4077 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				434962B625502A6700BC4077 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
