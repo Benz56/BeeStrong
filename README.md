@@ -1,4 +1,4 @@
-<img src="assets/logo.png" alt="logo" width="200"/>
+<img src="BeeStrong/BeeStrong/Assets.xcassets/logo.imageset/logo.png" alt="logo" width="200"/>
 
 # BeeStrong 
 
