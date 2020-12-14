@@ -67,10 +67,10 @@
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
-		A2558F742587697400ED82EC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = SOURCE_ROOT; };
-		A2558F7C25876FD100ED82EC /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = SOURCE_ROOT; };
-		A2558F81258774FE00ED82EC /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = SOURCE_ROOT; };
-		A2558F862587766E00ED82EC /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = SOURCE_ROOT; };
+		A2558F742587697400ED82EC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Set.swift; path = BeeStrong/Moduls/Set.swift; sourceTree = SOURCE_ROOT; };
+		A2558F7C25876FD100ED82EC /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = BeeStrong/Moduls/Exercise.swift; sourceTree = SOURCE_ROOT; };
+		A2558F81258774FE00ED82EC /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = BeeStrong/Moduls/Workout.swift; sourceTree = SOURCE_ROOT; };
+		A2558F862587766E00ED82EC /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainingSession.swift; path = BeeStrong/Moduls/TrainingSession.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,10 +136,10 @@
 		434962B125502A6700BC4077 /* BeeStrong */ = {
 			isa = PBXGroup;
 			children = (
+				A2558F8B2587AA6700ED82EC /* Moduls */,
 				4319B51B2583D56700E1EF00 /* Supporting files */,
 				434962E8255033AD00BC4077 /* Controllers */,
 				434962E72550339E00BC4077 /* Views */,
-				434962E62550334500BC4077 /* Models */,
 				434962C025502A6800BC4077 /* Info.plist */,
 			);
 			path = BeeStrong;
@@ -163,17 +163,6 @@
 			path = BeeStrongUITests;
 			sourceTree = "<group>";
 		};
-		434962E62550334500BC4077 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				A2558F742587697400ED82EC /* Set.swift */,
-				A2558F7C25876FD100ED82EC /* Exercise.swift */,
-				A2558F81258774FE00ED82EC /* Workout.swift */,
-				A2558F862587766E00ED82EC /* TrainingSession.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		434962E72550339E00BC4077 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,6 +180,17 @@
 				434962FC255052C200BC4077 /* ProcessViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A2558F8B2587AA6700ED82EC /* Moduls */ = {
+			isa = PBXGroup;
+			children = (
+				A2558F742587697400ED82EC /* Set.swift */,
+				A2558F7C25876FD100ED82EC /* Exercise.swift */,
+				A2558F81258774FE00ED82EC /* Workout.swift */,
+				A2558F862587766E00ED82EC /* TrainingSession.swift */,
+			);
+			path = Moduls;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

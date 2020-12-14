@@ -10,10 +10,10 @@ import Foundation
 class Exercise {
         var exerciseTitle: String
         var bodyPart: String
-        var sets = [set]()
+        var sets = [Set]()
         let id = UUID()
     
-    init(exerciseTitle: String, bodyPart: String, sets: [set]) {
+    init(exerciseTitle: String, bodyPart: String, sets: [Set]) {
         self.exerciseTitle = exerciseTitle
         self.bodyPart = bodyPart
         
