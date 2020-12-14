@@ -188,6 +188,7 @@
                         <segue destination="5qP-Xp-NZx" kind="relationship" relationship="viewControllers" id="Siy-gH-SVZ"/>
                         <segue destination="aak-YU-io5" kind="relationship" relationship="viewControllers" id="AGC-NZ-Fvg"/>
                         <segue destination="j8x-eh-M3U" kind="relationship" relationship="viewControllers" id="hJ9-IC-yoW"/>
+                        <segue destination="3UP-qq-kNn" kind="relationship" relationship="viewControllers" id="e88-UM-eME"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYS-aM-3if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -224,8 +225,70 @@
             </objects>
             <point key="canvasLocation" x="1612" y="421"/>
         </scene>
+        <!--Google Sign In-->
+        <scene sceneID="0y2-My-bJB">
+            <objects>
+                <viewController id="3UP-qq-kNn" customClass="GoogleSignInViewController" customModule="BeeStrong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJj-LU-zES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in to Google" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l57-Hx-Ery">
+                                <rect key="frame" x="140" y="87" width="134.5" height="20.5"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-xj-Xuz">
+                                <rect key="frame" x="62.5" y="115.5" width="289" height="38"/>
+                                <string key="text">This allows the app to add 
+your training sessions to Google Calendar.</string>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lsj-Qi-8fo" customClass="GIDSignInButton">
+                                <rect key="frame" x="88" y="189" width="239.99999999999989" height="127.99999999999977"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <action selector="didTapSignOut:" destination="3UP-qq-kNn" eventType="valueChanged" id="sGI-3O-AIm"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfu-va-l2m">
+                                <rect key="frame" x="207" y="340" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1sU-Pz-Xuv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lsj-Qi-8fo" firstAttribute="top" secondItem="fPS-xj-Xuz" secondAttribute="bottom" constant="35.5" id="08g-3v-yfc"/>
+                            <constraint firstItem="dfu-va-l2m" firstAttribute="top" secondItem="lsj-Qi-8fo" secondAttribute="bottom" constant="23.000000000000227" id="2ca-RG-cYT"/>
+                            <constraint firstItem="1sU-Pz-Xuv" firstAttribute="bottom" secondItem="lsj-Qi-8fo" secondAttribute="bottom" constant="496.00000000000023" id="3Yq-gG-Mwi"/>
+                            <constraint firstItem="fPS-xj-Xuz" firstAttribute="top" secondItem="l57-Hx-Ery" secondAttribute="bottom" constant="8" id="5dc-CD-TGa"/>
+                            <constraint firstItem="lsj-Qi-8fo" firstAttribute="centerX" secondItem="dfu-va-l2m" secondAttribute="centerX" id="8bL-iv-rz4"/>
+                            <constraint firstItem="l57-Hx-Ery" firstAttribute="top" secondItem="1sU-Pz-Xuv" secondAttribute="top" constant="43" id="A3V-l8-4Eg"/>
+                            <constraint firstItem="lsj-Qi-8fo" firstAttribute="leading" secondItem="1sU-Pz-Xuv" secondAttribute="leading" constant="88" id="aaQ-4U-Vfo"/>
+                            <constraint firstItem="lsj-Qi-8fo" firstAttribute="centerX" secondItem="aJj-LU-zES" secondAttribute="centerX" id="do7-Kj-onc"/>
+                            <constraint firstItem="l57-Hx-Ery" firstAttribute="centerX" secondItem="fPS-xj-Xuz" secondAttribute="centerX" id="eEP-yK-qV9"/>
+                            <constraint firstItem="lsj-Qi-8fo" firstAttribute="centerX" secondItem="fPS-xj-Xuz" secondAttribute="centerX" id="n8R-lI-c4e"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Google Sign In" image="google.png" id="Xue-fH-xmk"/>
+                    <connections>
+                        <outlet property="signInButton" destination="lsj-Qi-8fo" id="Mpv-FB-Oeb"/>
+                        <outlet property="welcomeLabel" destination="dfu-va-l2m" id="WQX-Jv-YJ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSZ-s4-YPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492.753623188406" y="825.66964285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="google.png" width="18" height="18"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
