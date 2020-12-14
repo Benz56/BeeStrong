@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431EA6442587B3D100EC8FB1 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6432587B3D100EC8FB1 /* Exercise.swift */; };
+		431EA6492587B3DE00EC8FB1 /* WorkingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */; };
+		431EA64E2587B3EB00EC8FB1 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */; };
+		431EA6532587B3F800EC8FB1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6522587B3F800EC8FB1 /* Workout.swift */; };
 		4347568725876884002F02D3 /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568625876884002F02D3 /* Calender.storyboard */; };
 		4347568C258768DA002F02D3 /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568B258768DA002F02D3 /* Workouts.storyboard */; };
 		43475691258768E5002F02D3 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43475690258768E5002F02D3 /* Progress.storyboard */; };
@@ -49,6 +53,10 @@
 		0AF43615DB8D48AC585621A9 /* Pods_BeeStrongTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrongTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EB70F2E60CD585C4329B727 /* Pods-BeeStrong-BeeStrongUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong-BeeStrongUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		41A226154C110F646566943E /* Pods-BeeStrongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrongTests.release.xcconfig"; path = "Target Support Files/Pods-BeeStrongTests/Pods-BeeStrongTests.release.xcconfig"; sourceTree = "<group>"; };
+		431EA6432587B3D100EC8FB1 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSet.swift; sourceTree = "<group>"; };
+		431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
+		431EA6522587B3F800EC8FB1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4347568625876884002F02D3 /* Calender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calender.storyboard; sourceTree = "<group>"; };
 		4347568B258768DA002F02D3 /* Workouts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Workouts.storyboard; sourceTree = "<group>"; };
 		43475690258768E5002F02D3 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
@@ -122,6 +130,17 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		431EA63F2587B30E00EC8FB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				431EA6432587B3D100EC8FB1 /* Exercise.swift */,
+				431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */,
+				431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */,
+				431EA6522587B3F800EC8FB1 /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		434962A625502A6700BC4077 = {
 			isa = PBXGroup;
 			children = (
@@ -150,7 +169,7 @@
 				4319B51B2583D56700E1EF00 /* Supporting files */,
 				434962E8255033AD00BC4077 /* Controllers */,
 				434962E72550339E00BC4077 /* Views */,
-				434962E62550334500BC4077 /* Models */,
+				431EA63F2587B30E00EC8FB1 /* Models */,
 				434962C025502A6800BC4077 /* Info.plist */,
 			);
 			path = BeeStrong;
@@ -172,13 +191,6 @@
 				434962D625502A6800BC4077 /* Info.plist */,
 			);
 			path = BeeStrongUITests;
-			sourceTree = "<group>";
-		};
-		434962E62550334500BC4077 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		434962E72550339E00BC4077 /* Views */ = {
@@ -465,6 +477,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431EA6492587B3DE00EC8FB1 /* WorkingSet.swift in Sources */,
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
 				43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */,
@@ -473,6 +486,9 @@
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
+				431EA64E2587B3EB00EC8FB1 /* TrainingSession.swift in Sources */,
+				431EA6442587B3D100EC8FB1 /* Exercise.swift in Sources */,
+				431EA6532587B3F800EC8FB1 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
