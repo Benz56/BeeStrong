@@ -22,6 +22,7 @@
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
+		A2558F752587697400ED82EC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2558F742587697400ED82EC /* Set.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		A2558F742587697400ED82EC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Set.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +160,7 @@
 		434962E62550334500BC4077 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A2558F742587697400ED82EC /* Set.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2558F752587697400ED82EC /* Set.swift in Sources */,
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
 				4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */,
