@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4319B52A2583D87400E1EF00 /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4319B5282583D87400E1EF00 /* Calender.storyboard */; };
-		4319B52F2583D88800E1EF00 /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4319B52E2583D88800E1EF00 /* Workouts.storyboard */; };
-		4319B5352583D89300E1EF00 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4319B5332583D89300E1EF00 /* Progress.storyboard */; };
+		4347568725876884002F02D3 /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568625876884002F02D3 /* Calender.storyboard */; };
+		4347568C258768DA002F02D3 /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568B258768DA002F02D3 /* Workouts.storyboard */; };
+		43475691258768E5002F02D3 /* Progress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 43475690258768E5002F02D3 /* Progress.storyboard */; };
 		434962B325502A6700BC4077 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B225502A6700BC4077 /* AppDelegate.swift */; };
 		434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B425502A6700BC4077 /* SceneDelegate.swift */; };
 		434962B725502A6700BC4077 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962B625502A6700BC4077 /* HomeViewController.swift */; };
@@ -42,9 +42,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4319B5292583D87400E1EF00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BeeStrong/Supporting files/Base.lproj/Calender.storyboard"; sourceTree = "<group>"; };
-		4319B52E2583D88800E1EF00 /* Workouts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Workouts.storyboard; sourceTree = "<group>"; };
-		4319B5342583D89300E1EF00 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "BeeStrong/Supporting files/Base.lproj/Progress.storyboard"; sourceTree = "<group>"; };
+		4347568625876884002F02D3 /* Calender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calender.storyboard; sourceTree = "<group>"; };
+		4347568B258768DA002F02D3 /* Workouts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Workouts.storyboard; sourceTree = "<group>"; };
+		43475690258768E5002F02D3 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
 		434962AF25502A6700BC4077 /* BeeStrong.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeeStrong.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		434962B225502A6700BC4077 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		434962B425502A6700BC4077 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,11 +96,11 @@
 				434962B225502A6700BC4077 /* AppDelegate.swift */,
 				434962B425502A6700BC4077 /* SceneDelegate.swift */,
 				434962B825502A6700BC4077 /* Home.storyboard */,
-				4319B5332583D89300E1EF00 /* Progress.storyboard */,
-				4319B52E2583D88800E1EF00 /* Workouts.storyboard */,
-				4319B5282583D87400E1EF00 /* Calender.storyboard */,
 				434962BB25502A6800BC4077 /* Assets.xcassets */,
 				434962BD25502A6800BC4077 /* LaunchScreen.storyboard */,
+				4347568625876884002F02D3 /* Calender.storyboard */,
+				4347568B258768DA002F02D3 /* Workouts.storyboard */,
+				43475690258768E5002F02D3 /* Progress.storyboard */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -284,10 +284,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4319B52A2583D87400E1EF00 /* Calender.storyboard in Resources */,
-				4319B52F2583D88800E1EF00 /* Workouts.storyboard in Resources */,
+				4347568725876884002F02D3 /* Calender.storyboard in Resources */,
+				4347568C258768DA002F02D3 /* Workouts.storyboard in Resources */,
 				434962BF25502A6800BC4077 /* LaunchScreen.storyboard in Resources */,
-				4319B5352583D89300E1EF00 /* Progress.storyboard in Resources */,
+				43475691258768E5002F02D3 /* Progress.storyboard in Resources */,
 				434962BC25502A6800BC4077 /* Assets.xcassets in Resources */,
 				434962BA25502A6700BC4077 /* Home.storyboard in Resources */,
 			);
@@ -356,22 +356,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4319B5282583D87400E1EF00 /* Calender.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4319B5292583D87400E1EF00 /* Base */,
-			);
-			name = Calender.storyboard;
-			sourceTree = "<group>";
-		};
-		4319B5332583D89300E1EF00 /* Progress.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4319B5342583D89300E1EF00 /* Base */,
-			);
-			name = Progress.storyboard;
-			sourceTree = "<group>";
-		};
 		434962B825502A6700BC4077 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
