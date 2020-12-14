@@ -26,6 +26,7 @@
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		436634012587BB9300AD4329 /* Test2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436634002587BB9300AD4329 /* Test2.swift */; };
+		436633F92587BB5D00AD4329 /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 436633F82587BB5D00AD4329 /* Test.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
 		43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */; };
 		8A7B9B94E4E55E5550BB2703 /* Pods_BeeStrongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF43615DB8D48AC585621A9 /* Pods_BeeStrongTests.framework */; };
@@ -79,6 +80,7 @@
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		436634002587BB9300AD4329 /* Test2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test2.swift; sourceTree = "<group>"; };
+		436633F82587BB5D00AD4329 /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsTableViewCell.swift; sourceTree = "<group>"; };
 		78A60E038DCCA6A75CD966C0 /* Pods-BeeStrongTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrongTests.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrongTests/Pods-BeeStrongTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 				4347568B258768DA002F02D3 /* Workouts.storyboard */,
 				43475690258768E5002F02D3 /* Progress.storyboard */,
 				436634002587BB9300AD4329 /* Test2.swift */,
+				436633F82587BB5D00AD4329 /* Test.swift */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -487,6 +490,7 @@
 				436634012587BB9300AD4329 /* Test2.swift in Sources */,
 				4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */,
 				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
+				436633F92587BB5D00AD4329 /* Test.swift in Sources */,
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
@@ -670,6 +674,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AG9792KB6;
 				INFOPLIST_FILE = BeeStrong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -689,6 +694,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3AG9792KB6;
 				INFOPLIST_FILE = BeeStrong/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
