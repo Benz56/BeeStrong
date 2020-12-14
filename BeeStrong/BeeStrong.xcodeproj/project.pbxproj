@@ -22,6 +22,10 @@
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
+		A2558F752587697400ED82EC /* Set.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2558F742587697400ED82EC /* Set.swift */; };
+		A2558F7D25876FD100ED82EC /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2558F7C25876FD100ED82EC /* Exercise.swift */; };
+		A2558F82258774FE00ED82EC /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2558F81258774FE00ED82EC /* Workout.swift */; };
+		A2558F872587766E00ED82EC /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2558F862587766E00ED82EC /* TrainingSession.swift */; };
 		43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */; };
 		8A7B9B94E4E55E5550BB2703 /* Pods_BeeStrongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF43615DB8D48AC585621A9 /* Pods_BeeStrongTests.framework */; };
 		D63AA86DE4E09CC7B69C2460 /* Pods_BeeStrong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */; };
@@ -70,6 +74,10 @@
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		A2558F742587697400ED82EC /* Set.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Set.swift; path = BeeStrong/Models/Set.swift; sourceTree = SOURCE_ROOT; };
+		A2558F7C25876FD100ED82EC /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Exercise.swift; path = BeeStrong/Models/Exercise.swift; sourceTree = SOURCE_ROOT; };
+		A2558F81258774FE00ED82EC /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Workout.swift; path = BeeStrong/Models/Workout.swift; sourceTree = SOURCE_ROOT; };
+		A2558F862587766E00ED82EC /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TrainingSession.swift; path = BeeStrong/Models/TrainingSession.swift; sourceTree = SOURCE_ROOT; };
 		43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsTableViewCell.swift; sourceTree = "<group>"; };
 		78A60E038DCCA6A75CD966C0 /* Pods-BeeStrongTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrongTests.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrongTests/Pods-BeeStrongTests.debug.xcconfig"; sourceTree = "<group>"; };
 		9E3856C5B05A1B8C869C83F8 /* Pods-BeeStrong-BeeStrongUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong-BeeStrongUITests.release.xcconfig"; path = "Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -147,10 +155,10 @@
 		434962B125502A6700BC4077 /* BeeStrong */ = {
 			isa = PBXGroup;
 			children = (
+				A2558F8C2587AB1100ED82EC /* Models */,
 				4319B51B2583D56700E1EF00 /* Supporting files */,
 				434962E8255033AD00BC4077 /* Controllers */,
 				434962E72550339E00BC4077 /* Views */,
-				434962E62550334500BC4077 /* Models */,
 				434962C025502A6800BC4077 /* Info.plist */,
 			);
 			path = BeeStrong;
@@ -174,13 +182,6 @@
 			path = BeeStrongUITests;
 			sourceTree = "<group>";
 		};
-		434962E62550334500BC4077 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		434962E72550339E00BC4077 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +202,15 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		A2558F8C2587AB1100ED82EC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A2558F7C25876FD100ED82EC /* Exercise.swift */,
+				A2558F742587697400ED82EC /* Set.swift */,
+				A2558F81258774FE00ED82EC /* Workout.swift */,
+				A2558F862587766E00ED82EC /* TrainingSession.swift */,
+			);
+			path = Models;
 		7230A75B1B22BAEC2766DDB0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -465,14 +475,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A2558F752587697400ED82EC /* Set.swift in Sources */,
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
+				A2558F82258774FE00ED82EC /* Workout.swift in Sources */,
 				43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */,
 				4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */,
 				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
+				A2558F872587766E00ED82EC /* TrainingSession.swift in Sources */,
+				A2558F7D25876FD100ED82EC /* Exercise.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
