@@ -7,13 +7,13 @@
 
 import Foundation
 
-class workout {
+class Workout {
     var workoutTitle: String
     var date = Date()
-    var exercises = [exercise]()
+    var exercises = [Exercise]()
     var id = UUID()
     
-    init(workoutTitle: String, exercises: [exercise]) {
+    init(workoutTitle: String, exercises: [Exercise]) {
         self.workoutTitle = workoutTitle
     }
 }

@@ -7,19 +7,19 @@
 
 import Foundation
 
-enum workoutStatus {
+enum WorkoutStatus {
     case planned
     case current
     case done
 }
 
-class trainingSession {
+class TrainingSession {
     let date = Date()
-    var status: workoutStatus
-    var workouts = [workout]()
+    var status: WorkoutStatus
+    var workouts = [Workout]()
     var id = UUID()
     
-    init(status: workoutStatus, workouts: [workout], date: Date) {
+    init(status: WorkoutStatus, workouts: [Workout], date: Date) {
         self.status = status
     }
     

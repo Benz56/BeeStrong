@@ -7,7 +7,7 @@
 
 import Foundation
 
-class set {
+class Set {
         var repetitions: Int
         var weight: Double
         let id = UUID()
