@@ -8,15 +8,12 @@
 import Foundation
 
 class set {
-    
-    struct set {
         var repetitions: Int
         var weight: Double
-        let uuid = UUID()
-        init(repetitions: Int, weight: Double, uuid:UUID) {
+        let id = UUID()
+        
+        init(repetitions: Int, weight: Double, id:UUID) {
             self.repetitions = repetitions
             self.weight = weight
         }
-    }
-    
 }
