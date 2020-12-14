@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jC7-Or-5UU">
-                                <rect key="frame" x="217" y="140" width="177" height="100"/>
+                                <rect key="frame" x="212" y="140" width="182" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="Tce-fN-bhx"/>
@@ -26,12 +26,17 @@
                                 <state key="normal" title="Workouts">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onWorkoutsTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ddv-g9-trX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF7-kS-68P">
-                                <rect key="frame" x="217" y="260" width="177" height="100"/>
+                                <rect key="frame" x="212" y="250" width="182" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="IB8-Lb-hSb"/>
@@ -40,12 +45,17 @@
                                 <state key="normal" title="Google Calender">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onGoogleCalenderTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uvR-Xz-JTy"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tb3-5l-QtI">
-                                <rect key="frame" x="20" y="140" width="177" height="100"/>
+                                <rect key="frame" x="20" y="140" width="182" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="CCF-hw-Lf9"/>
@@ -54,12 +64,17 @@
                                 <state key="normal" title="Calender">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onCalenderTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CLd-9x-wbQ"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lc8-Eh-9Hg">
-                                <rect key="frame" x="20" y="260" width="177" height="100"/>
+                                <rect key="frame" x="20" y="250" width="182" height="100"/>
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="TfA-43-464"/>
@@ -68,6 +83,11 @@
                                 <state key="normal" title="Progress">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onProgressTouched:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CaS-Hh-U8B"/>
                                 </connections>
@@ -79,14 +99,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ehj-dn-4yf">
-                                <rect key="frame" x="20" y="380" width="374" height="4"/>
+                                <rect key="frame" x="20" y="370" width="374" height="4"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="4" id="W74-GJ-vpV"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O0M-8Q-uu6">
-                                <rect key="frame" x="20" y="448" width="374" height="345"/>
+                                <rect key="frame" x="20" y="438" width="374" height="355"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="homeTableViewCell" rowHeight="102" id="Dg0-Kp-Ohd" customClass="HomeTableViewCell" customModule="BeeStrong" customModuleProvider="target">
@@ -127,7 +152,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEB-08-crw">
-                                <rect key="frame" x="20" y="404" width="191.5" height="24"/>
+                                <rect key="frame" x="20" y="394" width="191.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -149,17 +174,17 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="613-8x-8Iw" secondAttribute="trailing" symbolic="YES" id="LTq-i9-977"/>
                             <constraint firstItem="ehj-dn-4yf" firstAttribute="top" secondItem="lc8-Eh-9Hg" secondAttribute="bottom" constant="20" id="Qhw-C6-XbD"/>
                             <constraint firstItem="tb3-5l-QtI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="WaY-mW-Mjr"/>
-                            <constraint firstItem="lc8-Eh-9Hg" firstAttribute="top" secondItem="tb3-5l-QtI" secondAttribute="bottom" constant="20" id="YPX-fF-LBu"/>
+                            <constraint firstItem="lc8-Eh-9Hg" firstAttribute="top" secondItem="tb3-5l-QtI" secondAttribute="bottom" constant="10" id="YPX-fF-LBu"/>
                             <constraint firstItem="613-8x-8Iw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="baQ-4e-RIn"/>
                             <constraint firstItem="ehj-dn-4yf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="ckO-RO-nng"/>
                             <constraint firstItem="jC7-Or-5UU" firstAttribute="width" secondItem="tb3-5l-QtI" secondAttribute="width" id="dHO-hm-x6W"/>
                             <constraint firstItem="tb3-5l-QtI" firstAttribute="top" secondItem="613-8x-8Iw" secondAttribute="bottom" constant="30" id="dHv-eo-gs6"/>
                             <constraint firstItem="613-8x-8Iw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="eRe-PD-C9l"/>
-                            <constraint firstItem="cF7-kS-68P" firstAttribute="leading" secondItem="lc8-Eh-9Hg" secondAttribute="trailing" constant="20" id="inA-np-7e0"/>
-                            <constraint firstItem="jC7-Or-5UU" firstAttribute="leading" secondItem="tb3-5l-QtI" secondAttribute="trailing" constant="20" id="sBh-Vb-QvL"/>
+                            <constraint firstItem="cF7-kS-68P" firstAttribute="leading" secondItem="lc8-Eh-9Hg" secondAttribute="trailing" constant="10" id="inA-np-7e0"/>
+                            <constraint firstItem="jC7-Or-5UU" firstAttribute="leading" secondItem="tb3-5l-QtI" secondAttribute="trailing" constant="10" id="sBh-Vb-QvL"/>
                             <constraint firstItem="jC7-Or-5UU" firstAttribute="top" secondItem="613-8x-8Iw" secondAttribute="bottom" constant="30" id="v6V-Ud-Vpk"/>
                             <constraint firstItem="lc8-Eh-9Hg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="v9J-JA-9at"/>
-                            <constraint firstItem="cF7-kS-68P" firstAttribute="top" secondItem="jC7-Or-5UU" secondAttribute="bottom" constant="20" id="vJS-fT-Cr1"/>
+                            <constraint firstItem="cF7-kS-68P" firstAttribute="top" secondItem="jC7-Or-5UU" secondAttribute="bottom" constant="10" id="vJS-fT-Cr1"/>
                             <constraint firstItem="kEB-08-crw" firstAttribute="top" secondItem="ehj-dn-4yf" secondAttribute="bottom" constant="20" id="xwV-Ze-cKg"/>
                         </constraints>
                     </view>

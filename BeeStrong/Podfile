@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-# platform :ios, '9.0'
+platform :ios, '14.1'
 
 target 'BeeStrong' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -8,6 +8,8 @@ target 'BeeStrong' do
 
   # Pods for BeeStrong
 
+  pod 'KDCalendar', '~> 1.8.4'
+  
   target 'BeeStrongTests' do
     inherit! :search_paths
     # Pods for testing
