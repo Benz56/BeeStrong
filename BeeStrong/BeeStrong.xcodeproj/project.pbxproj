@@ -22,26 +22,7 @@
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
-		51A3BE38504D976FE6332F21 /* Pods_BeeStrongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F617CA79C22A0B7050E0A97 /* Pods_BeeStrongTests.framework */; };
-		F8CEA12D4615E19BBC1879E3 /* Pods_BeeStrong_BeeStrongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 189CC1148343C2896D20539F /* Pods_BeeStrong_BeeStrongUITests.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		434962C625502A6800BC4077 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 434962A725502A6700BC4077 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 434962AE25502A6700BC4077;
-			remoteInfo = BeeStrong;
-		};
-		434962D125502A6800BC4077 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 434962A725502A6700BC4077 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 434962AE25502A6700BC4077;
-			remoteInfo = BeeStrong;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		189CC1148343C2896D20539F /* Pods_BeeStrong_BeeStrongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrong_BeeStrongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,8 +41,6 @@
 		434962BB25502A6800BC4077 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		434962BE25502A6800BC4077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		434962C025502A6800BC4077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		434962C525502A6800BC4077 /* BeeStrongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeStrongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		434962D025502A6800BC4077 /* BeeStrongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeStrongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		434962EF2550503B00BC4077 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
@@ -79,22 +58,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				257E0F7415C6D852F53193C2 /* Pods_BeeStrong.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		434962C225502A6800BC4077 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				51A3BE38504D976FE6332F21 /* Pods_BeeStrongTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		434962CD25502A6800BC4077 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8CEA12D4615E19BBC1879E3 /* Pods_BeeStrong_BeeStrongUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,8 +106,6 @@
 			isa = PBXGroup;
 			children = (
 				434962AF25502A6700BC4077 /* BeeStrong.app */,
-				434962C525502A6800BC4077 /* BeeStrongTests.xctest */,
-				434962D025502A6800BC4077 /* BeeStrongUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,46 +182,6 @@
 			productReference = 434962AF25502A6700BC4077 /* BeeStrong.app */;
 			productType = "com.apple.product-type.application";
 		};
-		434962C425502A6800BC4077 /* BeeStrongTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 434962DC25502A6800BC4077 /* Build configuration list for PBXNativeTarget "BeeStrongTests" */;
-			buildPhases = (
-				FA6A764450C36CD7DA66134E /* [CP] Check Pods Manifest.lock */,
-				434962C125502A6800BC4077 /* Sources */,
-				434962C225502A6800BC4077 /* Frameworks */,
-				434962C325502A6800BC4077 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				434962C725502A6800BC4077 /* PBXTargetDependency */,
-			);
-			name = BeeStrongTests;
-			productName = BeeStrongTests;
-			productReference = 434962C525502A6800BC4077 /* BeeStrongTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		434962CF25502A6800BC4077 /* BeeStrongUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 434962DF25502A6800BC4077 /* Build configuration list for PBXNativeTarget "BeeStrongUITests" */;
-			buildPhases = (
-				24DD5CD8F1CD9D97DDCCAB40 /* [CP] Check Pods Manifest.lock */,
-				434962CC25502A6800BC4077 /* Sources */,
-				434962CD25502A6800BC4077 /* Frameworks */,
-				434962CE25502A6800BC4077 /* Resources */,
-				4F07D022243A057A8F2D915C /* [CP] Embed Pods Frameworks */,
-				803E9C7E61F2B9CDF226C87A /* [CP] Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				434962D225502A6800BC4077 /* PBXTargetDependency */,
-			);
-			name = BeeStrongUITests;
-			productName = BeeStrongUITests;
-			productReference = 434962D025502A6800BC4077 /* BeeStrongUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -272,14 +193,6 @@
 				TargetAttributes = {
 					434962AE25502A6700BC4077 = {
 						CreatedOnToolsVersion = 12.1;
-					};
-					434962C425502A6800BC4077 = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 434962AE25502A6700BC4077;
-					};
-					434962CF25502A6800BC4077 = {
-						CreatedOnToolsVersion = 12.1;
-						TestTargetID = 434962AE25502A6700BC4077;
 					};
 				};
 			};
@@ -297,8 +210,6 @@
 			projectRoot = "";
 			targets = (
 				434962AE25502A6700BC4077 /* BeeStrong */,
-				434962C425502A6800BC4077 /* BeeStrongTests */,
-				434962CF25502A6800BC4077 /* BeeStrongUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -317,45 +228,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		434962C325502A6800BC4077 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		434962CE25502A6800BC4077 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24DD5CD8F1CD9D97DDCCAB40 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BeeStrong-BeeStrongUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 		353F8C6506F35FF145F0B1AF /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -371,23 +246,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeeStrong/Pods-BeeStrong-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F07D022243A057A8F2D915C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		75EA40F6A65349561D3FA5B0 /* [CP] Check Pods Manifest.lock */ = {
@@ -412,23 +270,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		803E9C7E61F2B9CDF226C87A /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		E19A33ED622B0F05324671A3 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -444,28 +285,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeeStrong/Pods-BeeStrong-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FA6A764450C36CD7DA66134E /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BeeStrongTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -486,34 +305,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		434962C125502A6800BC4077 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		434962CC25502A6800BC4077 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		434962C725502A6800BC4077 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 434962AE25502A6700BC4077 /* BeeStrong */;
-			targetProxy = 434962C625502A6800BC4077 /* PBXContainerItemProxy */;
-		};
-		434962D225502A6800BC4077 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 434962AE25502A6700BC4077 /* BeeStrong */;
-			targetProxy = 434962D125502A6800BC4077 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		434962B825502A6700BC4077 /* Home.storyboard */ = {
@@ -691,90 +483,6 @@
 			};
 			name = Release;
 		};
-		434962DD25502A6800BC4077 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C7D8C89A06FDFC93FBCADFE /* Pods-BeeStrongTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BeeStrongTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dk.sdu.BeeStrongTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeeStrong.app/BeeStrong";
-			};
-			name = Debug;
-		};
-		434962DE25502A6800BC4077 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 39A95E2FFAF390746FA9D075 /* Pods-BeeStrongTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BeeStrongTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dk.sdu.BeeStrongTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BeeStrong.app/BeeStrong";
-			};
-			name = Release;
-		};
-		434962E025502A6800BC4077 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C86F20A11762BAAA804EFF8F /* Pods-BeeStrong-BeeStrongUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BeeStrongUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dk.sdu.BeeStrongUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BeeStrong;
-			};
-			name = Debug;
-		};
-		434962E125502A6800BC4077 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B4734647152D63D7120748 /* Pods-BeeStrong-BeeStrongUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BeeStrongUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = dk.sdu.BeeStrongUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = BeeStrong;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -792,24 +500,6 @@
 			buildConfigurations = (
 				434962DA25502A6800BC4077 /* Debug */,
 				434962DB25502A6800BC4077 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		434962DC25502A6800BC4077 /* Build configuration list for PBXNativeTarget "BeeStrongTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				434962DD25502A6800BC4077 /* Debug */,
-				434962DE25502A6800BC4077 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		434962DF25502A6800BC4077 /* Build configuration list for PBXNativeTarget "BeeStrongUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				434962E025502A6800BC4077 /* Debug */,
-				434962E125502A6800BC4077 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
