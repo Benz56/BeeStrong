@@ -4,20 +4,12 @@ platform :ios, '14.1'
 target 'BeeStrong' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
-  pod 'GoogleAPIClientForREST/Calendar'
-  pod 'GoogleSignIn'
+  
 
   # Pods for BeeStrong
 
   pod 'KDCalendar', '~> 1.8.4'
-  
-  target 'BeeStrongTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'BeeStrongUITests' do
-    # Pods for testing
-  end
+  pod 'GoogleAPIClientForREST/Calendar'
+  pod 'GoogleSignIn' 
 
 end

@@ -1,0 +1,6 @@
+framework module Pods_BeeStrong {
+  umbrella header "Pods-BeeStrong-umbrella.h"
+
+  export *
+  module * { export * }
+}
