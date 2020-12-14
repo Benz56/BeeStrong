@@ -1,6 +1,0 @@
-framework module Pods_BeeStrong_BeeStrongUITests {
-  umbrella header "Pods-BeeStrong-BeeStrongUITests-umbrella.h"
-
-  export *
-  module * { export * }
-}
