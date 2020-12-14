@@ -20,16 +20,12 @@
 		434962BA25502A6700BC4077 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434962B825502A6700BC4077 /* Home.storyboard */; };
 		434962BC25502A6800BC4077 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 434962BB25502A6800BC4077 /* Assets.xcassets */; };
 		434962BF25502A6800BC4077 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 434962BD25502A6800BC4077 /* LaunchScreen.storyboard */; };
-		434962CA25502A6800BC4077 /* BeeStrongTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962C925502A6800BC4077 /* BeeStrongTests.swift */; };
-		434962D525502A6800BC4077 /* BeeStrongUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962D425502A6800BC4077 /* BeeStrongUITests.swift */; };
 		434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962EF2550503B00BC4077 /* CalenderViewController.swift */; };
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
 		43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */; };
-		8A7B9B94E4E55E5550BB2703 /* Pods_BeeStrongTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AF43615DB8D48AC585621A9 /* Pods_BeeStrongTests.framework */; };
 		D63AA86DE4E09CC7B69C2460 /* Pods_BeeStrong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */; };
-		F44B34552BDE24AC31842EAB /* Pods_BeeStrong_BeeStrongUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E73EA77C62B559321F2B548C /* Pods_BeeStrong_BeeStrongUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,9 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0AF43615DB8D48AC585621A9 /* Pods_BeeStrongTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrongTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1EB70F2E60CD585C4329B727 /* Pods-BeeStrong-BeeStrongUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong-BeeStrongUITests.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		41A226154C110F646566943E /* Pods-BeeStrongTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrongTests.release.xcconfig"; path = "Target Support Files/Pods-BeeStrongTests/Pods-BeeStrongTests.release.xcconfig"; sourceTree = "<group>"; };
 		431EA6432587B3D100EC8FB1 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
 		431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSet.swift; sourceTree = "<group>"; };
 		431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
@@ -69,21 +62,14 @@
 		434962BE25502A6800BC4077 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		434962C025502A6800BC4077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434962C525502A6800BC4077 /* BeeStrongTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeStrongTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		434962C925502A6800BC4077 /* BeeStrongTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeStrongTests.swift; sourceTree = "<group>"; };
-		434962CB25502A6800BC4077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434962D025502A6800BC4077 /* BeeStrongUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BeeStrongUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		434962D425502A6800BC4077 /* BeeStrongUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeeStrongUITests.swift; sourceTree = "<group>"; };
-		434962D625502A6800BC4077 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		434962EF2550503B00BC4077 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsTableViewCell.swift; sourceTree = "<group>"; };
-		78A60E038DCCA6A75CD966C0 /* Pods-BeeStrongTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrongTests.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrongTests/Pods-BeeStrongTests.debug.xcconfig"; sourceTree = "<group>"; };
-		9E3856C5B05A1B8C869C83F8 /* Pods-BeeStrong-BeeStrongUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong-BeeStrongUITests.release.xcconfig"; path = "Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests.release.xcconfig"; sourceTree = "<group>"; };
 		AB25ED0BAE433478F0BCD2AE /* Pods-BeeStrong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.debug.xcconfig"; sourceTree = "<group>"; };
 		E12FEDEF0AB9D0ABD83C3560 /* Pods-BeeStrong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.release.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.release.xcconfig"; sourceTree = "<group>"; };
-		E73EA77C62B559321F2B548C /* Pods_BeeStrong_BeeStrongUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrong_BeeStrongUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -100,7 +86,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A7B9B94E4E55E5550BB2703 /* Pods_BeeStrongTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,7 +93,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F44B34552BDE24AC31842EAB /* Pods_BeeStrong_BeeStrongUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				434962B125502A6700BC4077 /* BeeStrong */,
-				434962C825502A6800BC4077 /* BeeStrongTests */,
-				434962D325502A6800BC4077 /* BeeStrongUITests */,
 				434962B025502A6700BC4077 /* Products */,
 				7230A75B1B22BAEC2766DDB0 /* Pods */,
 				DA16D38DF34B287B45530063 /* Frameworks */,
@@ -175,24 +157,6 @@
 			path = BeeStrong;
 			sourceTree = "<group>";
 		};
-		434962C825502A6800BC4077 /* BeeStrongTests */ = {
-			isa = PBXGroup;
-			children = (
-				434962C925502A6800BC4077 /* BeeStrongTests.swift */,
-				434962CB25502A6800BC4077 /* Info.plist */,
-			);
-			path = BeeStrongTests;
-			sourceTree = "<group>";
-		};
-		434962D325502A6800BC4077 /* BeeStrongUITests */ = {
-			isa = PBXGroup;
-			children = (
-				434962D425502A6800BC4077 /* BeeStrongUITests.swift */,
-				434962D625502A6800BC4077 /* Info.plist */,
-			);
-			path = BeeStrongUITests;
-			sourceTree = "<group>";
-		};
 		434962E72550339E00BC4077 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,10 +182,6 @@
 			children = (
 				AB25ED0BAE433478F0BCD2AE /* Pods-BeeStrong.debug.xcconfig */,
 				E12FEDEF0AB9D0ABD83C3560 /* Pods-BeeStrong.release.xcconfig */,
-				1EB70F2E60CD585C4329B727 /* Pods-BeeStrong-BeeStrongUITests.debug.xcconfig */,
-				9E3856C5B05A1B8C869C83F8 /* Pods-BeeStrong-BeeStrongUITests.release.xcconfig */,
-				78A60E038DCCA6A75CD966C0 /* Pods-BeeStrongTests.debug.xcconfig */,
-				41A226154C110F646566943E /* Pods-BeeStrongTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -230,8 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */,
-				E73EA77C62B559321F2B548C /* Pods_BeeStrong_BeeStrongUITests.framework */,
-				0AF43615DB8D48AC585621A9 /* Pods_BeeStrongTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -496,7 +454,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434962CA25502A6800BC4077 /* BeeStrongTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,7 +461,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				434962D525502A6800BC4077 /* BeeStrongUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,7 +657,6 @@
 		};
 		434962DD25502A6800BC4077 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78A60E038DCCA6A75CD966C0 /* Pods-BeeStrongTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -723,7 +678,6 @@
 		};
 		434962DE25502A6800BC4077 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 41A226154C110F646566943E /* Pods-BeeStrongTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -745,7 +699,6 @@
 		};
 		434962E025502A6800BC4077 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1EB70F2E60CD585C4329B727 /* Pods-BeeStrong-BeeStrongUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -765,7 +718,6 @@
 		};
 		434962E125502A6800BC4077 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9E3856C5B05A1B8C869C83F8 /* Pods-BeeStrong-BeeStrongUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
