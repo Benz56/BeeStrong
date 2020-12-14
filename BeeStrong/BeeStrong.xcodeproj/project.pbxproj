@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431EA6442587B3D100EC8FB1 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6432587B3D100EC8FB1 /* Exercise.swift */; };
+		431EA6492587B3DE00EC8FB1 /* WorkingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */; };
+		431EA64E2587B3EB00EC8FB1 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */; };
+		431EA6532587B3F800EC8FB1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6522587B3F800EC8FB1 /* Workout.swift */; };
 		43426EA12587A74300D7DDF1 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */; };
 		4347568725876884002F02D3 /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568625876884002F02D3 /* Calender.storyboard */; };
 		4347568C258768DA002F02D3 /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568B258768DA002F02D3 /* Workouts.storyboard */; };
@@ -21,10 +25,16 @@
 		434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962F72550506700BC4077 /* WorkoutsViewController.swift */; };
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
+		43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */; };
+		D63AA86DE4E09CC7B69C2460 /* Pods_BeeStrong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
+		431EA6432587B3D100EC8FB1 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
+		431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSet.swift; sourceTree = "<group>"; };
+		431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
+		431EA6522587B3F800EC8FB1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		4347568625876884002F02D3 /* Calender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calender.storyboard; sourceTree = "<group>"; };
 		4347568B258768DA002F02D3 /* Workouts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Workouts.storyboard; sourceTree = "<group>"; };
 		43475690258768E5002F02D3 /* Progress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Progress.storyboard; sourceTree = "<group>"; };
@@ -40,6 +50,10 @@
 		434962F72550506700BC4077 /* WorkoutsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsViewController.swift; sourceTree = "<group>"; };
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsTableViewCell.swift; sourceTree = "<group>"; };
+		AB25ED0BAE433478F0BCD2AE /* Pods-BeeStrong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.debug.xcconfig"; sourceTree = "<group>"; };
+		E12FEDEF0AB9D0ABD83C3560 /* Pods-BeeStrong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.release.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.release.xcconfig"; sourceTree = "<group>"; };
+		FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D63AA86DE4E09CC7B69C2460 /* Pods_BeeStrong.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,11 +90,24 @@
 			path = "Supporting files";
 			sourceTree = "<group>";
 		};
+		431EA63F2587B30E00EC8FB1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				431EA6432587B3D100EC8FB1 /* Exercise.swift */,
+				431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */,
+				431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */,
+				431EA6522587B3F800EC8FB1 /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		434962A625502A6700BC4077 = {
 			isa = PBXGroup;
 			children = (
 				434962B125502A6700BC4077 /* BeeStrong */,
 				434962B025502A6700BC4077 /* Products */,
+				7230A75B1B22BAEC2766DDB0 /* Pods */,
+				DA16D38DF34B287B45530063 /* Frameworks */,
 				006EBDA718336C5BB05FEA3E /* Pods */,
 			);
 			sourceTree = "<group>";
@@ -98,23 +126,17 @@
 				4319B51B2583D56700E1EF00 /* Supporting files */,
 				434962E8255033AD00BC4077 /* Controllers */,
 				434962E72550339E00BC4077 /* Views */,
-				434962E62550334500BC4077 /* Models */,
+				431EA63F2587B30E00EC8FB1 /* Models */,
 				434962C025502A6800BC4077 /* Info.plist */,
 			);
 			path = BeeStrong;
-			sourceTree = "<group>";
-		};
-		434962E62550334500BC4077 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		434962E72550339E00BC4077 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */,
+				43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -126,9 +148,26 @@
 				434962EF2550503B00BC4077 /* CalenderViewController.swift */,
 				434962F72550506700BC4077 /* WorkoutsViewController.swift */,
 				434962FC255052C200BC4077 /* ProcessViewController.swift */,
-				43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */,
+                43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		7230A75B1B22BAEC2766DDB0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB25ED0BAE433478F0BCD2AE /* Pods-BeeStrong.debug.xcconfig */,
+				E12FEDEF0AB9D0ABD83C3560 /* Pods-BeeStrong.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DA16D38DF34B287B45530063 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FF743DB3306A0A661FE56369 /* Pods_BeeStrong.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +177,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 434962D925502A6800BC4077 /* Build configuration list for PBXNativeTarget "BeeStrong" */;
 			buildPhases = (
+				FB5689A009D10AD7FCF06F2E /* [CP] Check Pods Manifest.lock */,
 				434962AB25502A6700BC4077 /* Sources */,
 				434962AC25502A6700BC4077 /* Frameworks */,
 				434962AD25502A6700BC4077 /* Resources */,
+				B156445915FC4B42B0B0C04C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -199,19 +240,127 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0AECA59B303D408BD9D0EC20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeeStrong-BeeStrongUITests/Pods-BeeStrong-BeeStrongUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C181625C605CA134B590F37 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeeStrongTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B156445915FC4B42B0B0C04C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong/Pods-BeeStrong-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BeeStrong/Pods-BeeStrong-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BeeStrong/Pods-BeeStrong-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F496D6DA31458E4FAE345697 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeeStrong-BeeStrongUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FB5689A009D10AD7FCF06F2E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BeeStrong-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		434962AB25502A6700BC4077 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				431EA6492587B3DE00EC8FB1 /* WorkingSet.swift in Sources */,
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
+				43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */,
 				4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */,
 				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
 				43426EA12587A74300D7DDF1 /* GoogleSignInViewController.swift in Sources */,
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
+				431EA64E2587B3EB00EC8FB1 /* TrainingSession.swift in Sources */,
+				431EA6442587B3D100EC8FB1 /* Exercise.swift in Sources */,
+				431EA6532587B3F800EC8FB1 /* Workout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +504,7 @@
 		};
 		434962DA25502A6800BC4077 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB25ED0BAE433478F0BCD2AE /* Pods-BeeStrong.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -374,6 +524,7 @@
 		};
 		434962DB25502A6800BC4077 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E12FEDEF0AB9D0ABD83C3560 /* Pods-BeeStrong.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

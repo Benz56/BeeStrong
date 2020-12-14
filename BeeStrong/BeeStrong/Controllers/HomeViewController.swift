@@ -27,15 +27,15 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func onCalenderTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first(where: {$0 is CalenderViewController})
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is CalenderViewController}
     }
     
     @IBAction func onWorkoutsTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first(where: {$0 is WorkoutsViewController})
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is WorkoutsViewController}
     }
     
     @IBAction func onProgressTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first(where: {$0 is ProcessViewController})
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is ProcessViewController}
     }
     
     @IBAction func onGoogleCalenderTouched(_ sender: UIButton) {
