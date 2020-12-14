@@ -9,7 +9,6 @@ import Foundation
 
 class Workout {
     var workoutTitle: String
-    var date = Date()
     var exercises = [Exercise]()
     var id = UUID()
     
