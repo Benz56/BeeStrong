@@ -15,20 +15,132 @@
                     <view key="view" contentMode="scaleToFill" id="beB-oD-24r">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYy-NF-10U" customClass="CalendarView" customModule="KDCalendar">
+                                <rect key="frame" x="20" y="64" width="374" height="374"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="fYy-NF-10U" secondAttribute="height" multiplier="1:1" id="NbD-58-F1a"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtN-g2-ZiX">
+                                <rect key="frame" x="20" y="438" width="374" height="30"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Add Workout">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="onAddWorkout:" destination="Jff-y4-hND" eventType="touchUpInside" id="fn8-mK-bfQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Upcoming Training Sessions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBQ-Xf-6hr">
+                                <rect key="frame" x="20" y="488" width="230.5" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuv-pc-aaB">
+                                <rect key="frame" x="20" y="529" width="374" height="264"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="upcomingSessionTableCell" rowHeight="50" id="3WX-6h-zRH" customClass="UpcomingSessionsTableViewCell" customModule="BeeStrong" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3WX-6h-zRH" id="b3Q-il-HHa">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Text" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIv-i3-d4l">
+                                                    <rect key="frame" x="20" y="11" width="32" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="sessionText" destination="tIv-i3-d4l" id="HnB-Nb-9y2"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="anR-LG-7DS">
+                                <rect key="frame" x="20" y="414" width="374" height="4"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="y4O-My-j6n"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzU-tJ-gbA">
+                                <rect key="frame" x="0.0" y="597" width="414" height="216"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </pickerView>
+                            <toolbar hidden="YES" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AS4-hg-Khw">
+                                <rect key="frame" x="0.0" y="553" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="Select" id="1KX-kN-8s3">
+                                        <connections>
+                                            <action selector="onWorkoutSelected:" destination="Jff-y4-hND" id="zBB-WQ-ClZ"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="bzz-4w-9pE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="leading" secondItem="AS4-hg-Khw" secondAttribute="leading" id="0Fv-8d-ozt"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="bottom" secondItem="uuv-pc-aaB" secondAttribute="bottom" constant="20" id="1FN-qb-NiU"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="trailing" secondItem="FzU-tJ-gbA" secondAttribute="trailing" id="1WN-ju-K23"/>
+                            <constraint firstItem="FzU-tJ-gbA" firstAttribute="top" secondItem="AS4-hg-Khw" secondAttribute="bottom" id="H5l-nO-CGp"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="trailing" secondItem="fYy-NF-10U" secondAttribute="trailing" constant="20" id="Jja-2S-pYI"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="trailing" secondItem="AS4-hg-Khw" secondAttribute="trailing" id="Kw9-jF-pyj"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="bottom" secondItem="FzU-tJ-gbA" secondAttribute="bottom" id="OjN-ph-mbC"/>
+                            <constraint firstItem="DtN-g2-ZiX" firstAttribute="leading" secondItem="bzz-4w-9pE" secondAttribute="leading" constant="20" id="QwK-Ho-a0W"/>
+                            <constraint firstItem="DtN-g2-ZiX" firstAttribute="top" secondItem="fYy-NF-10U" secondAttribute="bottom" id="U52-NP-dfM"/>
+                            <constraint firstItem="uuv-pc-aaB" firstAttribute="top" secondItem="KBQ-Xf-6hr" secondAttribute="bottom" constant="20" id="ZmR-o1-IPy"/>
+                            <constraint firstItem="KBQ-Xf-6hr" firstAttribute="leading" secondItem="bzz-4w-9pE" secondAttribute="leading" constant="20" id="e6X-EI-t4i"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="trailing" secondItem="anR-LG-7DS" secondAttribute="trailing" constant="20" id="f3G-nX-WRw"/>
+                            <constraint firstItem="fYy-NF-10U" firstAttribute="top" secondItem="bzz-4w-9pE" secondAttribute="top" constant="20" id="g97-cR-Opo"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="trailing" secondItem="DtN-g2-ZiX" secondAttribute="trailing" constant="20" id="gKB-U1-qNx"/>
+                            <constraint firstItem="DtN-g2-ZiX" firstAttribute="top" secondItem="anR-LG-7DS" secondAttribute="bottom" constant="20" id="ho3-oY-jzU"/>
+                            <constraint firstItem="KBQ-Xf-6hr" firstAttribute="top" secondItem="DtN-g2-ZiX" secondAttribute="bottom" constant="20" id="o9p-FC-MJ8"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="trailing" secondItem="uuv-pc-aaB" secondAttribute="trailing" constant="20" id="p8M-tB-cfc"/>
+                            <constraint firstItem="uuv-pc-aaB" firstAttribute="leading" secondItem="bzz-4w-9pE" secondAttribute="leading" constant="20" id="pPt-i9-XXv"/>
+                            <constraint firstItem="fYy-NF-10U" firstAttribute="leading" secondItem="bzz-4w-9pE" secondAttribute="leading" constant="20" id="tmC-I6-WEa"/>
+                            <constraint firstItem="bzz-4w-9pE" firstAttribute="leading" secondItem="FzU-tJ-gbA" secondAttribute="leading" id="ynx-Bd-cJi"/>
+                            <constraint firstItem="anR-LG-7DS" firstAttribute="leading" secondItem="bzz-4w-9pE" secondAttribute="leading" constant="20" id="zdi-Li-Fhy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Calender" id="YbV-aG-atD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="calendar" destination="fYy-NF-10U" id="ooQ-vU-mzs"/>
+                        <outlet property="upcomingSessionsTableView" destination="uuv-pc-aaB" id="LkF-Gm-hag"/>
+                        <outlet property="workoutPickerView" destination="FzU-tJ-gbA" id="3C1-gC-zzl"/>
+                        <outlet property="workoutToolbar" destination="AS4-hg-Khw" id="lX0-ll-Jad"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZqN-lI-0z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="138" y="27"/>
+            <point key="canvasLocation" x="111.59420289855073" y="54.910714285714285"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
