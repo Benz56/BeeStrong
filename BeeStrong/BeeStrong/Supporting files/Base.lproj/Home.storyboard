@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvq-Ov-UVk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvq-Ov-UVk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -196,7 +196,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2119" y="159"/>
+            <point key="canvasLocation" x="2118.840579710145" y="158.70535714285714"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="4JE-lD-fly">
@@ -213,6 +213,7 @@
                         <segue destination="5qP-Xp-NZx" kind="relationship" relationship="viewControllers" id="Siy-gH-SVZ"/>
                         <segue destination="aak-YU-io5" kind="relationship" relationship="viewControllers" id="AGC-NZ-Fvg"/>
                         <segue destination="j8x-eh-M3U" kind="relationship" relationship="viewControllers" id="hJ9-IC-yoW"/>
+                        <segue destination="3UP-qq-kNn" kind="relationship" relationship="viewControllers" id="e88-UM-eME"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NYS-aM-3if" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -249,10 +250,85 @@
             </objects>
             <point key="canvasLocation" x="1612" y="421"/>
         </scene>
+        <!--Google Sign In-->
+        <scene sceneID="0y2-My-bJB">
+            <objects>
+                <viewController id="3UP-qq-kNn" customClass="GoogleSignInViewController" customModule="BeeStrong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aJj-LU-zES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-1h-kdb" userLabel="Sign In Stack View">
+                                <rect key="frame" x="62.5" y="186" width="289" height="138.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign in..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l57-Hx-Ery">
+                                        <rect key="frame" x="82.5" y="0.0" width="124" height="20.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fPS-xj-Xuz">
+                                        <rect key="frame" x="0.0" y="28.5" width="289" height="38"/>
+                                        <string key="text">This allows the app to add 
+your training sessions to Google Calendar.</string>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mgs-Zl-ocI">
+                                        <rect key="frame" x="53.5" y="74.5" width="182" height="28"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <inset key="contentEdgeInsets" minX="25" minY="5" maxX="25" maxY="5"/>
+                                        <state key="normal" title="Sign in with Google">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signInButtonTapped:" destination="3UP-qq-kNn" eventType="touchUpInside" id="Tps-U5-QgM"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sa2-0z-q4e">
+                                        <rect key="frame" x="89.5" y="110.5" width="110" height="28"/>
+                                        <color key="backgroundColor" systemColor="systemFillColor"/>
+                                        <inset key="contentEdgeInsets" minX="25" minY="5" maxX="25" maxY="5"/>
+                                        <state key="normal" title="Sign Out">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signOutButtonTapped:" destination="3UP-qq-kNn" eventType="touchUpInside" id="XAk-AE-cGb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1sU-Pz-Xuv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fcP-1h-kdb" firstAttribute="top" secondItem="1sU-Pz-Xuv" secondAttribute="top" constant="142" id="UDD-Ba-iag"/>
+                            <constraint firstItem="fcP-1h-kdb" firstAttribute="centerX" secondItem="aJj-LU-zES" secondAttribute="centerX" id="cZQ-y7-sg8"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Google Sign In" id="Xue-fH-xmk"/>
+                    <connections>
+                        <outlet property="signInButton" destination="mgs-Zl-ocI" id="ESZ-qk-H5b"/>
+                        <outlet property="signOutButton" destination="sa2-0z-q4e" id="0f2-kI-Brs"/>
+                        <outlet property="welcomeMessage" destination="fPS-xj-Xuz" id="Q17-TQ-KXq"/>
+                        <outlet property="welcomeTitle" destination="l57-Hx-Ery" id="gD4-sc-MLV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSZ-s4-YPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1492.753623188406" y="825.66964285714278"/>
+        </scene>
     </scenes>
     <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
