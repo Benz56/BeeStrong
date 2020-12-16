@@ -25,18 +25,29 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         let userId = user.userID                  // For client-side use only!
         let idToken = user.authentication.idToken // Safe to send to the server
         let fullName = user.profile.name
-        currentUserName = fullName!
-        print("user full name: \(String(describing: fullName))")
+        NotificationCenter.default.post(
+              name: Notification.Name(rawValue: "ToggleAuthUINotification"),
+              object: nil,
+              userInfo: ["statusText": "Signed in user:\n\(fullName!)"])
+        printScopes()
     }
+    
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
               withError error: Error!) {
       // Perform any operations when the user disconnects from app here.
+        NotificationCenter.default.post(
+              name: Notification.Name(rawValue: "ToggleAuthUINotification"),
+              object: nil,
+              userInfo: ["statusText": "User has disconnected."])
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "102352110855-vall5gr93l9bq2v90ck5vehdpqp73hm6.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
+        
+        // Automatically sign in the user.
+        GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         return true
     }
 
@@ -64,6 +75,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication,
                      open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
       return GIDSignIn.sharedInstance().handle(url)
+    }
+    
+    func printScopes(){
+        let user = GIDSignIn.sharedInstance().currentUser
+        // Check if the user has granted the Drive scope
+        print(user?.grantedScopes as Any)
     }
 }
 
