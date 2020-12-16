@@ -7,10 +7,12 @@
 
 import UIKit
 import GoogleSignIn
+import GoogleAPIClientForREST
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    var currentUserName = ""
+    private let scopes = [kGTLRAuthScopeCalendarEvents, kGTLRAuthScopeCalendar]
+    private let service = GTLRCalendarService()
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
           }
           return
         }
+        
         // Perform operations on signed in user here.
         let userId = user.userID                  // For client-side use only!
         let idToken = user.authentication.idToken // Safe to send to the server
@@ -30,6 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
               object: nil,
               userInfo: ["statusText": "Signed in user:\n\(fullName!)"])
         printScopes()
+        let authorizer = user.authentication.accessToken
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
@@ -45,7 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "102352110855-vall5gr93l9bq2v90ck5vehdpqp73hm6.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        
+        GIDSignIn.sharedInstance()?.scopes.append(contentsOf: scopes)
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         return true

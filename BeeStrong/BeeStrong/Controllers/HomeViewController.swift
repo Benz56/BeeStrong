@@ -39,7 +39,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     @IBAction func onGoogleCalenderTouched(_ sender: UIButton) {
-        //TODO Go to Google Calender
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is GoogleSignInViewController}
     }
     
     override func viewDidLoad() {
