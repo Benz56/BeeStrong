@@ -8,20 +8,24 @@
 import UIKit
 import KDCalendar
 
-class CalenderViewController: UIViewController, CalendarViewDataSource, CalendarViewDelegate, UITableViewDelegate, UITableViewDataSource, UIPickerViewDataSource, UIPickerViewDelegate {
+class CalenderViewController: UIViewController, CalendarViewDataSource, CalendarViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
 
+    private let workoutManager = WorkoutManager()
+    private var allWorkouts: [Workout]?
     @IBOutlet weak var workoutPickerView: UIPickerView!
     @IBOutlet weak var workoutToolbar: UIToolbar!
     @IBOutlet weak var workourToolBarButton: UIBarButtonItem!
     @IBOutlet weak var calendar: CalendarView!
-    
-    @IBOutlet weak var upcomingSessionsTableView: UITableView!
+    @IBOutlet weak var upcomingSessionsTableView: UpcomingSessionsUITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerSetup()
         calendarSetup()
-        tableViewSetup()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        allWorkouts = workoutManager.getAllWorkouts()
     }
     
     func calendarSetup() {
@@ -39,11 +43,6 @@ class CalenderViewController: UIViewController, CalendarViewDataSource, Calendar
         style.cellSelectedBorderColor = .systemYellow
         style.cellSelectedBorderWidth = 5
         calendar.style = style
-    }
-    
-    func tableViewSetup() {
-        upcomingSessionsTableView.delegate = self
-        upcomingSessionsTableView.dataSource = self
     }
     
     func pickerSetup() {
@@ -85,28 +84,16 @@ class CalenderViewController: UIViewController, CalendarViewDataSource, Calendar
         
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10 //TODO model count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "upcomingSessionTableCell") as! UpcomingSessionsTableViewCell
-        
-        cell.sessionText.text = "x" //TODO Replace with actual data.
-        
-        return cell
-    }
-    
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 10 // TODO number of workouts.
+        return allWorkouts?.count ?? 0
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return "x" //TODO Return model[row]
+        return allWorkouts?[row].title ?? "?"
     }
     
     @IBAction func onWorkoutSelected(_ sender: UIBarButtonItem) {
@@ -122,5 +109,9 @@ class CalenderViewController: UIViewController, CalendarViewDataSource, Calendar
             workoutToolbar.isHidden = false
             workoutPickerView.selectRow(0, inComponent: 0, animated: false)
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        upcomingSessionsTableView.reloadData()
     }
 }
