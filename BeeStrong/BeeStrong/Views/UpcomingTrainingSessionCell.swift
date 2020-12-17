@@ -7,11 +7,10 @@
 
 import UIKit
 
-class HomeTableViewCell: UITableViewCell {
+class UpcomingTrainingSessionCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
-    
-    @IBOutlet weak var trainingSessionTitleLabel: UILabel!
+    @IBOutlet weak var workouts: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
