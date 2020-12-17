@@ -10,6 +10,8 @@ target 'BeeStrong' do
 
   pod 'KDCalendar', '~> 1.8.4'
   pod 'GoogleAPIClientForREST/Calendar'
-  pod 'GoogleSignIn' 
+  pod 'GoogleSignIn'  
+  pod 'Charts'
+  pod 'TinyConstraints'    
 
 end
