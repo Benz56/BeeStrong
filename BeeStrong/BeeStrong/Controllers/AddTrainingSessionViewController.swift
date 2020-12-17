@@ -35,8 +35,14 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell", for: indexPath)
-        cell.textLabel?.text = allWorkouts?[indexPath.row].title //TODO Show exercises as well.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell") as! SavedWorkoutTableViewCell
+        let workout = allWorkouts?[indexPath.row]
+
+        cell.titleLabel.text = workout?.title
+        cell.exercisesLabel.text = workout?.exercises?.array.map{e in e as! Exercise}.map{e in
+            "\(e.exerciseType!.title!) \n   " + e.sets!.array.map{s in s as! WorkingSet}.map{s in "\(s.repetitions) reps @ \(s.weight) kg"}.joined(separator: "\n   ")
+        }.joined(separator: "\n") ?? "?"
+        
         return cell
     }
     
@@ -44,7 +50,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         let tsManager = TrainingSessionsManager()
         var workouts = [Workout]()
         selectedWorkoutsTableView.indexPathsForSelectedRows?.forEach{workouts.append((allWorkouts?[$0.row])!)}
-        tsManager.add(for: Date(), with: workouts)
+        tsManager.add(for: date!, with: workouts) //TODO set the selected time on the date. It should really be an interval.
     }
 
 }

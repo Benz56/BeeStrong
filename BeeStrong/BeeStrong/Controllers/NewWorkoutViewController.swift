@@ -50,26 +50,34 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
         return cell
     }
     
-    //TODO Refactor. Duplicated code.
+    //TODO Could use some refactoring.
     @objc func textFieldEdited(_ textField: ExerciseTextField) {
         let exercise = exercises[textField.row]
         switch textField.fieldType {
         case .kg:
-            if exercise.sets?.count ?? 0 <= textField.set {
-                let workingSet = WorkingSet(context: workoutManager.context)
-                workingSet.weight = Double(textField.text!)! //TODO Dont force
-                exercise.addToSets(workingSet)
+            if let weight = Double(textField.text!) {
+                if exercise.sets?.count ?? 0 <= textField.set {
+                    let workingSet = WorkingSet(context: workoutManager.context)
+                    workingSet.weight = weight
+                    exercise.addToSets(workingSet)
+                } else {
+                    (exercise.sets![textField.set] as! WorkingSet).weight = weight
+                }
             } else {
-                (exercise.sets![textField.set] as! WorkingSet).weight = Double(textField.text!)!
+                textField.text = ""
             }
             break
         case .reps:
-            if exercise.sets?.count ?? 0 <= textField.set {
-                let workingSet = WorkingSet(context: workoutManager.context)
-                workingSet.repetitions = Int64(textField.text!)! //TODO Dont force
-                exercise.addToSets(workingSet)
+            if let reps = Int64(textField.text!) {
+                if exercise.sets?.count ?? 0 <= textField.set {
+                    let workingSet = WorkingSet(context: workoutManager.context)
+                    workingSet.repetitions = reps
+                    exercise.addToSets(workingSet)
+                } else {
+                    (exercise.sets![textField.set] as! WorkingSet).repetitions = reps
+                }
             } else {
-                (exercise.sets![textField.set] as! WorkingSet).repetitions = Int64(textField.text!)!
+                textField.text = ""
             }
             break
         case .none:
@@ -84,8 +92,9 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func onSaveWorkout(_ sender: UIBarButtonItem) {
-        if !(workoutTitleLabel.text?.isEmpty ?? true) && exercises.count > 0 {
-            print(exercises)
+        let allDataEntered = exercises.allSatisfy{e in e.sets!.count > 0 && (e.sets?.array.map{$0 as! WorkingSet}.allSatisfy{ws in ws.weight > 0 && ws.repetitions > 0} ?? false)}
+        
+        if !(workoutTitleLabel.text?.isEmpty ?? true) && exercises.count > 0 && allDataEntered {
             workoutManager.add(title: workoutTitleLabel.text!, with: exercises)
             navigationController?.popViewController(animated: true)
         }
