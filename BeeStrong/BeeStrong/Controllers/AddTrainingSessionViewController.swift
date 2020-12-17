@@ -9,7 +9,7 @@ import UIKit
 import CoreData
 
 class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     private let workoutManager = WorkoutManager()
     private var allWorkouts: [Workout]?
     @IBOutlet weak var selectedWorkoutsTableView: UITableView!
@@ -38,6 +38,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         datePicker.minimumDate = Date()
         startTimePicker.minimumDate = Date()
         endTimePicker.minimumDate = Date()
+        startTimePicker.addTarget(self, action: #selector(datePickerValueChanged(_:)), for: .valueChanged)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -51,7 +52,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WorkoutCell") as! SavedWorkoutTableViewCell
         let workout = allWorkouts?[indexPath.row]
-
+        
         cell.titleLabel.text = workout?.title
         cell.exercisesLabel.text = workoutToString(workout)
         
@@ -75,9 +76,11 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     }
     
     func alertOnSave() {
-        let inputAlert = UIAlertController(title: "Saved", message: "Training session is saved.", preferredStyle: .alert)
-        inputAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        self.present(inputAlert, animated: true, completion: nil)
+        let inputAlert = UIAlertController(title: "Training session is saved", message: "If you are logged in with Google, an entry is created in Google Calendar as well.", preferredStyle: .alert)
+        inputAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+            _ = self.navigationController?.popViewController(animated: true)
+        }))
+        self.present(inputAlert, animated: true)
     }
     
     fileprivate func workoutToString(_ workout: Workout?) -> String {
