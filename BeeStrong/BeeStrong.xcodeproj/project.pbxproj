@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		431EA6442587B3D100EC8FB1 /* Exercise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6432587B3D100EC8FB1 /* Exercise.swift */; };
-		431EA6492587B3DE00EC8FB1 /* WorkingSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */; };
-		431EA64E2587B3EB00EC8FB1 /* TrainingSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */; };
-		431EA6532587B3F800EC8FB1 /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431EA6522587B3F800EC8FB1 /* Workout.swift */; };
 		43426EA12587A74300D7DDF1 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */; };
 		4347568725876884002F02D3 /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568625876884002F02D3 /* Calender.storyboard */; };
 		4347568C258768DA002F02D3 /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568B258768DA002F02D3 /* Workouts.storyboard */; };
@@ -27,14 +23,24 @@
 		4376D4E6258A418000434DDD /* GoogleCalendarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376D4E5258A418000434DDD /* GoogleCalendarAPI.swift */; };
 		4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */; };
 		43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */; };
+		43684005258A4606008AB322 /* TrainingSessionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684004258A4606008AB322 /* TrainingSessionsManager.swift */; };
+		43684009258A475B008AB322 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684008258A475B008AB322 /* Manager.swift */; };
+		43684012258A6421008AB322 /* UpcomingSessionsUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684011258A6421008AB322 /* UpcomingSessionsUITableView.swift */; };
+		43684016258A6A9E008AB322 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684015258A6A9E008AB322 /* WorkoutManager.swift */; };
+		436FED76258A34D9009F8370 /* BeeStrong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FED74258A34D9009F8370 /* BeeStrong.xcdatamodeld */; };
+		4396C71F255060C200FB35F3 /* UpcomingTrainingSessionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4396C71E255060C200FB35F3 /* UpcomingTrainingSessionCell.swift */; };
+		43AE0785258A787D00FDBFE9 /* AddTrainingSessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE0784258A787D00FDBFE9 /* AddTrainingSessionViewController.swift */; };
+		43AE0788258A8BB200FDBFE9 /* WorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43AE0787258A8BB200FDBFE9 /* WorkoutTableViewCell.swift */; };
+		43FB3044258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3043258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift */; };
+		43FB304A258AB8C7009C1C26 /* ExerciseTypeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3049258AB8C7009C1C26 /* ExerciseTypeManager.swift */; };
+		43FB3052258ABA2D009C1C26 /* ExerciseTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3051258ABA2D009C1C26 /* ExerciseTypeViewController.swift */; };
+		43FB3055258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3054258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift */; };
+		43FB3059258B6D35009C1C26 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3058258B6D35009C1C26 /* ExerciseTableViewCell.swift */; };
+		43FB305C258B6ED2009C1C26 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */; };
 		7C5341D3090B3266DE5BF323 /* Pods_BeeStrong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1460450FF61BF08910AFE7C /* Pods_BeeStrong.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		431EA6432587B3D100EC8FB1 /* Exercise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exercise.swift; sourceTree = "<group>"; };
-		431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingSet.swift; sourceTree = "<group>"; };
-		431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSession.swift; sourceTree = "<group>"; };
-		431EA6522587B3F800EC8FB1 /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		4347568625876884002F02D3 /* Calender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calender.storyboard; sourceTree = "<group>"; };
 		4347568B258768DA002F02D3 /* Workouts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Workouts.storyboard; sourceTree = "<group>"; };
@@ -54,6 +60,20 @@
 		4376D4E5258A418000434DDD /* GoogleCalendarAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleCalendarAPI.swift; sourceTree = "<group>"; };
 		4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsTableViewCell.swift; sourceTree = "<group>"; };
+		43684004258A4606008AB322 /* TrainingSessionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionsManager.swift; sourceTree = "<group>"; };
+		43684008258A475B008AB322 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
+		43684011258A6421008AB322 /* UpcomingSessionsUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsUITableView.swift; sourceTree = "<group>"; };
+		43684015258A6A9E008AB322 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		436FED75258A34D9009F8370 /* BeeStrong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeeStrong.xcdatamodel; sourceTree = "<group>"; };
+		4396C71E255060C200FB35F3 /* UpcomingTrainingSessionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingTrainingSessionCell.swift; sourceTree = "<group>"; };
+		43AE0784258A787D00FDBFE9 /* AddTrainingSessionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTrainingSessionViewController.swift; sourceTree = "<group>"; };
+		43AE0787258A8BB200FDBFE9 /* WorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutTableViewCell.swift; sourceTree = "<group>"; };
+		43FB3043258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTypeCollectionViewCell.swift; sourceTree = "<group>"; };
+		43FB3049258AB8C7009C1C26 /* ExerciseTypeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTypeManager.swift; sourceTree = "<group>"; };
+		43FB3051258ABA2D009C1C26 /* ExerciseTypeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTypeViewController.swift; sourceTree = "<group>"; };
+		43FB3054258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciesTypeSectionHeader.swift; sourceTree = "<group>"; };
+		43FB3058258B6D35009C1C26 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
+		43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
 		B369DBBBBEEACA3D5A0533FD /* Pods-BeeStrong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.release.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.release.xcconfig"; sourceTree = "<group>"; };
 		C9E0667BCDA4B42ED1AB5D68 /* Pods-BeeStrong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.debug.xcconfig"; sourceTree = "<group>"; };
 		E1460450FF61BF08910AFE7C /* Pods_BeeStrong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,10 +118,10 @@
 		431EA63F2587B30E00EC8FB1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				431EA6432587B3D100EC8FB1 /* Exercise.swift */,
-				431EA6482587B3DE00EC8FB1 /* WorkingSet.swift */,
-				431EA64D2587B3EB00EC8FB1 /* TrainingSession.swift */,
-				431EA6522587B3F800EC8FB1 /* Workout.swift */,
+				43684004258A4606008AB322 /* TrainingSessionsManager.swift */,
+				43684015258A6A9E008AB322 /* WorkoutManager.swift */,
+				43684008258A475B008AB322 /* Manager.swift */,
+				43FB3049258AB8C7009C1C26 /* ExerciseTypeManager.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -132,6 +152,7 @@
 				434962E72550339E00BC4077 /* Views */,
 				431EA63F2587B30E00EC8FB1 /* Models */,
 				434962C025502A6800BC4077 /* Info.plist */,
+				436FED74258A34D9009F8370 /* BeeStrong.xcdatamodeld */,
 			);
 			path = BeeStrong;
 			sourceTree = "<group>";
@@ -139,8 +160,11 @@
 		434962E72550339E00BC4077 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4396C71E255060C200FB35F3 /* HomeTableViewCell.swift */,
-				43EF0B9A258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift */,
+				43FB3054258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift */,
+				4396C71E255060C200FB35F3 /* UpcomingTrainingSessionCell.swift */,
+				43AE0787258A8BB200FDBFE9 /* WorkoutTableViewCell.swift */,
+				43FB3043258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift */,
+				43FB3058258B6D35009C1C26 /* ExerciseTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +179,10 @@
 				434962FC255052C200BC4077 /* ProcessViewController.swift */,
 				43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */,
 				4376D4E5258A418000434DDD /* GoogleCalendarAPI.swift */,
+				43684011258A6421008AB322 /* UpcomingSessionsUITableView.swift */,
+				43AE0784258A787D00FDBFE9 /* AddTrainingSessionViewController.swift */,
+				43FB3051258ABA2D009C1C26 /* ExerciseTypeViewController.swift */,
+				43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -302,13 +330,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				431EA6492587B3DE00EC8FB1 /* WorkingSet.swift in Sources */,
+				43FB3044258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift in Sources */,
+				43FB3059258B6D35009C1C26 /* ExerciseTableViewCell.swift in Sources */,
+				43684012258A6421008AB322 /* UpcomingSessionsUITableView.swift in Sources */,
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
-				43EF0B9B258788F5004B38B0 /* UpcomingSessionsTableViewCell.swift in Sources */,
-				4396C71F255060C200FB35F3 /* HomeTableViewCell.swift in Sources */,
+				43AE0785258A787D00FDBFE9 /* AddTrainingSessionViewController.swift in Sources */,
+				4396C71F255060C200FB35F3 /* UpcomingTrainingSessionCell.swift in Sources */,
+				43FB3052258ABA2D009C1C26 /* ExerciseTypeViewController.swift in Sources */,
+				43684005258A4606008AB322 /* TrainingSessionsManager.swift in Sources */,
 				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
 				43426EA12587A74300D7DDF1 /* GoogleSignInViewController.swift in Sources */,
+				43684009258A475B008AB322 /* Manager.swift in Sources */,
+				43FB305C258B6ED2009C1C26 /* NewWorkoutViewController.swift in Sources */,
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
@@ -316,6 +350,11 @@
 				4376D4E6258A418000434DDD /* GoogleCalendarAPI.swift in Sources */,
 				431EA6442587B3D100EC8FB1 /* Exercise.swift in Sources */,
 				431EA6532587B3F800EC8FB1 /* Workout.swift in Sources */,
+				43684016258A6A9E008AB322 /* WorkoutManager.swift in Sources */,
+				43FB3055258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift in Sources */,
+				43FB304A258AB8C7009C1C26 /* ExerciseTypeManager.swift in Sources */,
+				43AE0788258A8BB200FDBFE9 /* WorkoutTableViewCell.swift in Sources */,
+				436FED76258A34D9009F8370 /* BeeStrong.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,6 +558,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		436FED74258A34D9009F8370 /* BeeStrong.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				436FED75258A34D9009F8370 /* BeeStrong.xcdatamodel */,
+			);
+			currentVersion = 436FED75258A34D9009F8370 /* BeeStrong.xcdatamodel */;
+			path = BeeStrong.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 434962A725502A6700BC4077 /* Project object */;
 }

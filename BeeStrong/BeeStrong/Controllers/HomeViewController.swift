@@ -6,48 +6,37 @@
 //
 
 import UIKit
+import CoreData
 
-class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    let model = ["a", "b", "c", "d"] // Test.
-    
-    @IBOutlet weak var upcomingWorkoutsTableView: UITableView!
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "homeTableViewCell") as! HomeTableViewCell
-        
-        cell.dateLabel.text = model[indexPath.row]
-        cell.trainingSessionTitleLabel.text = model[indexPath.row]
-        
-        return cell
-    }
+class HomeViewController: UIViewController {
+
+    @IBOutlet weak var upcomingWorkoutsTableView: UpcomingSessionsUITableView!
     
     @IBAction func onCalenderTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is CalenderViewController}
+        selectController(type: CalenderViewController.self)
     }
     
     @IBAction func onWorkoutsTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is WorkoutsViewController}
+        selectController(type: WorkoutsViewController.self)
     }
     
     @IBAction func onProgressTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is ProcessViewController}
+        selectController(type: ProcessViewController.self)
     }
     
     @IBAction func onGoogleCalenderTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is GoogleSignInViewController}
+        selectController(type: GoogleSignInViewController.self)
+    }
+    
+    func selectController(type: AnyClass) {
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0.isKind(of: type) || ($0 is UINavigationController && ($0 as! UINavigationController).viewControllers.contains{c in c.isKind(of: type)})}
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        upcomingWorkoutsTableView.delegate = self
-        upcomingWorkoutsTableView.dataSource = self
     }
     
-    
+    override func viewWillAppear(_ animated: Bool) {
+        upcomingWorkoutsTableView.reloadData()
+    }
 }

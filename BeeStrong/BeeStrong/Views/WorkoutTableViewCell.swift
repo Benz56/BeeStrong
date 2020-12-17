@@ -1,16 +1,14 @@
 //
-//  UpcomingSessionsTableViewCell.swift
+//  WorkoutTableViewCell.swift
 //  BeeStrong
 //
-//  Created by Benjamin Staugaard on 14/12/2020.
+//  Created by Benjamin Staugaard on 16/12/2020.
 //
 
 import UIKit
 
-class UpcomingSessionsTableViewCell: UITableViewCell {
+class WorkoutTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var sessionText: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,8 +16,7 @@ class UpcomingSessionsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+        self.accessoryType = selected ? .checkmark : .none
     }
 
 }
