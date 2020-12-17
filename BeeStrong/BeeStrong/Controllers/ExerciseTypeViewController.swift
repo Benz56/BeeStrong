@@ -13,6 +13,7 @@ class ExerciseTypeViewController: UIViewController, UICollectionViewDelegate, UI
     private let model = ["A", "D", "C", "B"]
     var exerciseTypeManager = ExerciseTypeManager()
     var exerciseTypes = [Character: [ExerciseType]]()
+    var previouslySelectedExerciseTypes = [ExerciseType]()
     
     @IBOutlet weak var exerciseTypeCollectionView: UICollectionView!
     
@@ -27,6 +28,9 @@ class ExerciseTypeViewController: UIViewController, UICollectionViewDelegate, UI
     func reloadData() {
         exerciseTypes.removeAll()
         for et in exerciseTypeManager.getAllExerciseTypes()! {
+            if previouslySelectedExerciseTypes.contains(et) {
+                continue
+            }
             if let first = et.title?.uppercased().first {
                 if exerciseTypes[first] != nil {
                     exerciseTypes[first]?.append(et)
@@ -100,16 +104,13 @@ class ExerciseTypeViewController: UIViewController, UICollectionViewDelegate, UI
     }
     
     @IBAction func onSave(_ sender: UIBarButtonItem) {
+        navigationController?.popViewController(animated: true)
+        if let newWorkoutController = navigationController?.viewControllers.last as? NewWorkoutViewController {
+            newWorkoutController.exercises.append(contentsOf: exerciseTypeCollectionView!.indexPathsForSelectedItems!.map{ip in
+                let e = Exercise(context: exerciseTypeManager.context)
+                e.exerciseType = indexPathToExerciseType(indexPath: ip)
+                return e
+            })
+        }
     }
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
-    
 }
