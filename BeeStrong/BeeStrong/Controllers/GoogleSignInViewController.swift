@@ -19,7 +19,7 @@ class GoogleSignInViewController: UIViewController {
     
     private let scopes = [kGTLRAuthScopeCalendarEvents, kGTLRAuthScopeCalendar]
     
-    private let googleCalendarAPI = GoogleCalendarAPI();
+    let googleCalendarAPI = GoogleCalendarAPI();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -86,17 +86,9 @@ class GoogleSignInViewController: UIViewController {
         }
     }
     
-    // GOOGLE CALENDAR INTEGRATION
-    
-    @IBAction func createTrainingCalendar() {
-        googleCalendarAPI.createTrainingCalendar()
-    }
-    
-    @IBAction func getListOfCalendars() {
-        googleCalendarAPI.getListOfCalendars()
-    }
+    /// GOOGLE CALENDAR INTEGRATION
     
     @IBAction func createEventButtonTapped(_ sender: Any) {
-        googleCalendarAPI.createEvent()
+        googleCalendarAPI.createTestEvent();
     }
 }

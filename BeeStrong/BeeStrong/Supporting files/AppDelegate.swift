@@ -13,7 +13,6 @@ import GoogleAPIClientForREST
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     private let scopes = [kGTLRAuthScopeCalendarEvents, kGTLRAuthScopeCalendar]
-    private let service = GTLRCalendarService()
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -33,8 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             name: Notification.Name(rawValue: "ToggleAuthUINotification"),
             object: nil,
             userInfo: ["statusText": "Signed in user:\n\(fullName!)"])
-        printScopes()
-        let authorizer = user.authentication.accessToken
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
@@ -80,12 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication,
                      open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
-    }
-    
-    func printScopes(){
-        let user = GIDSignIn.sharedInstance().currentUser
-        // Check if the user has granted the Drive scope
-        print(user?.grantedScopes as Any)
     }
     
     // MARK: - Core Data stack
