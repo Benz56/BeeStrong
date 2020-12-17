@@ -52,7 +52,12 @@ class GoogleCalendarAPI {
     }
     
     func createEventEndpoint(name: String, description: String, startDate: Date, endDate: Date) {
-        print(getIdOfTrainingCalendar()!)
+        guard let currentUser = GIDSignIn.sharedInstance().currentUser,
+              let authentication = currentUser.authentication else {
+            print("Event not created. User is not authenticated.")
+            return
+        }
+        getIdOfTrainingCalendar()
         if (calendarId != "") {
             createEvent(name: name, description: description, startDate: startDate, endDate: endDate)
         } else {
@@ -72,13 +77,6 @@ class GoogleCalendarAPI {
             guard error == nil, let calendars = (result as? GTLRCalendar_CalendarList)?.items else {
                 print(error!)
                 return
-            }
-            if calendars.count > 0 {
-                for calendar in calendars {
-                    print(calendar.summary!)
-                    print(calendar.identifier!)
-                    print("")
-                }
             }
             self.calendarList = calendars;
         });
@@ -160,8 +158,7 @@ class GoogleCalendarAPI {
                 print(error!)
                 return
             }
-            print(event.summary!)
-            print(event.identifier!)
+            print("Event created in Google Calendar: \(event.summary!) \(event.identifier!)")
         });
     }
     
@@ -201,15 +198,4 @@ Glutes:
 """
         self.createEventEndpoint(name: "Training session", description: description, startDate: Date(), endDate: Date(timeInterval: 3600, since: Date()))
     }
-    
-    // Pseudo code for creating an event we have to do the following:
-    /*
-     getIdOfTrainingCalendar()
-     if (id == "") {
-     await createCalendar
-     createEvent
-     } else {
-     createEvent
-     }
-     */
 }
