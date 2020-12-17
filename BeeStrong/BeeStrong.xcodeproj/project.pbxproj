@@ -34,6 +34,8 @@
 		43FB3055258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3054258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift */; };
 		43FB3059258B6D35009C1C26 /* ExerciseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3058258B6D35009C1C26 /* ExerciseTableViewCell.swift */; };
 		43FB305C258B6ED2009C1C26 /* NewWorkoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */; };
+		43FB3060258B9907009C1C26 /* ExerciseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB305F258B9907009C1C26 /* ExerciseTextField.swift */; };
+		43FB3067258BB292009C1C26 /* SavedWorkoutTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43FB3066258BB292009C1C26 /* SavedWorkoutTableViewCell.swift */; };
 		7C5341D3090B3266DE5BF323 /* Pods_BeeStrong.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1460450FF61BF08910AFE7C /* Pods_BeeStrong.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		43FB3054258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciesTypeSectionHeader.swift; sourceTree = "<group>"; };
 		43FB3058258B6D35009C1C26 /* ExerciseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTableViewCell.swift; sourceTree = "<group>"; };
 		43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewWorkoutViewController.swift; sourceTree = "<group>"; };
+		43FB305F258B9907009C1C26 /* ExerciseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseTextField.swift; sourceTree = "<group>"; };
+		43FB3066258BB292009C1C26 /* SavedWorkoutTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWorkoutTableViewCell.swift; sourceTree = "<group>"; };
 		B369DBBBBEEACA3D5A0533FD /* Pods-BeeStrong.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.release.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.release.xcconfig"; sourceTree = "<group>"; };
 		C9E0667BCDA4B42ED1AB5D68 /* Pods-BeeStrong.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BeeStrong.debug.xcconfig"; path = "Target Support Files/Pods-BeeStrong/Pods-BeeStrong.debug.xcconfig"; sourceTree = "<group>"; };
 		E1460450FF61BF08910AFE7C /* Pods_BeeStrong.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BeeStrong.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +162,7 @@
 				43AE0787258A8BB200FDBFE9 /* WorkoutTableViewCell.swift */,
 				43FB3043258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift */,
 				43FB3058258B6D35009C1C26 /* ExerciseTableViewCell.swift */,
+				43FB3066258BB292009C1C26 /* SavedWorkoutTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +179,7 @@
 				43AE0784258A787D00FDBFE9 /* AddTrainingSessionViewController.swift */,
 				43FB3051258ABA2D009C1C26 /* ExerciseTypeViewController.swift */,
 				43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */,
+				43FB305F258B9907009C1C26 /* ExerciseTextField.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -321,6 +327,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43FB3067258BB292009C1C26 /* SavedWorkoutTableViewCell.swift in Sources */,
 				43FB3044258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift in Sources */,
 				43FB3059258B6D35009C1C26 /* ExerciseTableViewCell.swift in Sources */,
 				43684012258A6421008AB322 /* UpcomingSessionsUITableView.swift in Sources */,
@@ -332,6 +339,7 @@
 				43684005258A4606008AB322 /* TrainingSessionsManager.swift in Sources */,
 				434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */,
 				43426EA12587A74300D7DDF1 /* GoogleSignInViewController.swift in Sources */,
+				43FB3060258B9907009C1C26 /* ExerciseTextField.swift in Sources */,
 				43684009258A475B008AB322 /* Manager.swift in Sources */,
 				43FB305C258B6ED2009C1C26 /* NewWorkoutViewController.swift in Sources */,
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
