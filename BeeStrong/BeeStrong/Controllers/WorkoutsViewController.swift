@@ -34,7 +34,9 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
         let workout = workouts?[indexPath.row]
 
         cell.titleLabel.text = workout?.title
-        cell.exercisesLabel.text = workout?.exercises?.array.map{e in e as! Exercise}.map{e in e.exerciseType!.title!}.joined(separator: "\n") ?? "?"
+        cell.exercisesLabel.text = workout?.exercises?.array.map{e in e as! Exercise}.map{e in
+            "\(e.exerciseType!.title!) \n   " + e.sets!.array.map{s in s as! WorkingSet}.map{s in "\(s.repetitions) reps @ \(s.weight) kg"}.joined(separator: "\n   ")
+        }.joined(separator: "\n") ?? "?"
         
         return cell
     }
