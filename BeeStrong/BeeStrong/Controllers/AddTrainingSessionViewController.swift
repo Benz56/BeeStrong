@@ -23,11 +23,6 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-YYYY"
         dateLabel.text = dateFormatter.string(from: date!)
-        
-        //TODO Remove test
-        workoutManager.add(title: "Chest", with: [Exercise]())
-        workoutManager.add(title: "Tricepts", with: [Exercise]())
-        workoutManager.add(title: "Stomach", with: [Exercise]())
     }
     
     override func viewDidAppear(_ animated: Bool) {

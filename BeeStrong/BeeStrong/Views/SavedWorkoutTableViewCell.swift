@@ -1,5 +1,5 @@
 //
-//  ExerciseTableViewCell.swift
+//  SavedWorkoutTableViewCell.swift
 //  BeeStrong
 //
 //  Created by Benjamin Staugaard on 17/12/2020.
@@ -7,20 +7,14 @@
 
 import UIKit
 
-class ExerciseTableViewCell: UITableViewCell {
+class SavedWorkoutTableViewCell: UITableViewCell {
 
-    private var latestBottomConstraint: NSLayoutConstraint?
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet var setLabels: [UILabel]!
-    @IBOutlet var repsTextFields: [ExerciseTextField]!
-    @IBOutlet var kgTextFields: [ExerciseTextField]!
-    
-    @IBAction func onAddSet(_ sender: UIButton) {
-        //TODO
-    }
+    @IBOutlet weak var exercisesLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
