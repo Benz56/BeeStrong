@@ -36,9 +36,9 @@ class UpcomingSessionsUITableView: UITableView, UITableViewDelegate, UITableView
         let date = (trainingSession?.value(forKey: "date") as! Date)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-YYYY HH.mm"
-        cell.dateLabel.text = dateFormatter.string(from: date)
         
-        cell.workouts.text = Array(trainingSession?.value(forKey: "workouts") as! Set<Workout>).map{$0.title!}.joined(separator: "\n")
+        cell.dateLabel.text = dateFormatter.string(from: date)
+        cell.workouts.text = Array(trainingSession?.workouts as! Set<Workout>).map{$0.title!}.joined(separator: "\n")
         return cell
     }
 }

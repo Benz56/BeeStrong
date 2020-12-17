@@ -13,19 +13,23 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var upcomingWorkoutsTableView: UpcomingSessionsUITableView!
     
     @IBAction func onCalenderTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is CalenderViewController}
+        selectController(type: CalenderViewController.self)
     }
     
     @IBAction func onWorkoutsTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is WorkoutsViewController}
+        selectController(type: WorkoutsViewController.self)
     }
     
     @IBAction func onProgressTouched(_ sender: UIButton) {
-        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0 is ProcessViewController}
+        selectController(type: ProcessViewController.self)
     }
     
     @IBAction func onGoogleCalenderTouched(_ sender: UIButton) {
-        //TODO Go to Google Calender
+        selectController(type: GoogleSignInViewController.self)
+    }
+    
+    func selectController(type: AnyClass) {
+        self.tabBarController?.selectedViewController = tabBarController?.viewControllers?.first{$0.isKind(of: type) || ($0 is UINavigationController && ($0 as! UINavigationController).viewControllers.contains{c in c.isKind(of: type)})}
     }
     
     override func viewDidLoad() {

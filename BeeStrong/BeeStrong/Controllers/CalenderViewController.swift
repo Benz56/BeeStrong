@@ -8,24 +8,14 @@
 import UIKit
 import KDCalendar
 
-class CalenderViewController: UIViewController, CalendarViewDataSource, CalendarViewDelegate, UIPickerViewDataSource, UIPickerViewDelegate {
+class CalenderViewController: UIViewController, CalendarViewDataSource, CalendarViewDelegate {
 
-    private let workoutManager = WorkoutManager()
-    private var allWorkouts: [Workout]?
-    @IBOutlet weak var workoutPickerView: UIPickerView!
-    @IBOutlet weak var workoutToolbar: UIToolbar!
-    @IBOutlet weak var workourToolBarButton: UIBarButtonItem!
     @IBOutlet weak var calendar: CalendarView!
     @IBOutlet weak var upcomingSessionsTableView: UpcomingSessionsUITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        pickerSetup()
         calendarSetup()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        allWorkouts = workoutManager.getAllWorkouts()
     }
     
     func calendarSetup() {
@@ -43,11 +33,6 @@ class CalenderViewController: UIViewController, CalendarViewDataSource, Calendar
         style.cellSelectedBorderColor = .systemYellow
         style.cellSelectedBorderWidth = 5
         calendar.style = style
-    }
-    
-    func pickerSetup() {
-        workoutPickerView.delegate = self
-        workoutPickerView.dataSource = self
     }
     
     func startDate() -> Date {
@@ -77,37 +62,18 @@ class CalenderViewController: UIViewController, CalendarViewDataSource, Calendar
     }
     
     func calendar(_ calendar: CalendarView, didDeselectDate date: Date) {
-        
     }
     
     func calendar(_ calendar: CalendarView, didLongPressDate date: Date, withEvents events: [CalendarEvent]?) {
-        
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return identifier == "NewTrainingSession" && calendar.selectedDates.count == 1
     }
     
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return allWorkouts?.count ?? 0
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        return allWorkouts?[row].title ?? "?"
-    }
-    
-    @IBAction func onWorkoutSelected(_ sender: UIBarButtonItem) {
-        workoutPickerView.isHidden = true
-        workoutToolbar.isHidden = true
-        workoutPickerView.selectedRow(inComponent: 0)
-        //TODO Save the workout with the name at the row in the model.
-    }
-    
-    @IBAction func onAddWorkout(_ sender: UIButton) {
-        if calendar.selectedDates.count > 0 {
-            workoutPickerView.isHidden = false
-            workoutToolbar.isHidden = false
-            workoutPickerView.selectRow(0, inComponent: 0, animated: false)
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "NewTrainingSession") {
+            (segue.destination as! AddTrainingSessionViewController).date = calendar.selectedDates.first
         }
     }
     
