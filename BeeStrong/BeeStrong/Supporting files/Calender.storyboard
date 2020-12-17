@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwO-dw-DIx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwO-dw-DIx">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -130,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="1021.7391304347827" y="54.910714285714285"/>
         </scene>
-        <!--Add Training Session View Controller-->
+        <!--Create Training Session-->
         <scene sceneID="gT2-4l-Olb">
             <objects>
                 <viewController id="kZc-k3-a9i" customClass="AddTrainingSessionViewController" customModule="BeeStrong" customModuleProvider="target" sceneMemberID="viewController">
@@ -138,10 +138,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4N-Hk-uqy">
-                                <rect key="frame" x="20" y="162" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to add a workout to the session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjr-og-KOj">
+                                <rect key="frame" x="20" y="229" width="284" height="19.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                <nil key="textColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-Zq-fIJ">
                                 <rect key="frame" x="0.0" y="257" width="414" height="556"/>
@@ -189,54 +189,57 @@
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-GJ-08f">
                                 <rect key="frame" x="20" y="108" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xIA-Ja-nOW">
-                                <rect key="frame" x="20" y="203" width="100" height="34"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="v3T-wX-gGD">
+                                <rect key="frame" x="226" y="158" width="168" height="50"/>
+                                <subviews>
+                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-2i-bZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="68" height="50"/>
+                                        <locale key="locale" localeIdentifier="en_DK"/>
+                                    </datePicker>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uze-2h-VCp">
+                                        <rect key="frame" x="80" y="15" width="8" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-x2-jgg">
+                                        <rect key="frame" x="100" y="0.0" width="68" height="50"/>
+                                        <locale key="locale" localeIdentifier="en_DK"/>
+                                    </datePicker>
+                                </subviews>
+                            </stackView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-33-B36">
+                                <rect key="frame" x="20" y="158" width="126" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="AWD-jk-HMd"/>
+                                    <constraint firstAttribute="width" constant="126" id="hUD-bt-AE9"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XO9-vV-kAn">
-                                <rect key="frame" x="140" y="209.5" width="8" height="21"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HXS-I1-UZV">
-                                <rect key="frame" x="168" y="203" width="100" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="jCC-qw-XaT"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <locale key="locale" localeIdentifier="en_DK"/>
+                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NYC-nA-W3L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="q4N-Hk-uqy" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" constant="20" id="1qV-N1-aba"/>
-                            <constraint firstItem="q4N-Hk-uqy" firstAttribute="top" secondItem="l4B-GJ-08f" secondAttribute="bottom" constant="20" id="1u7-S7-3w4"/>
+                            <constraint firstItem="fjr-og-KOj" firstAttribute="top" secondItem="0BN-33-B36" secondAttribute="bottom" constant="21" id="0mc-Gm-hMi"/>
                             <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="l4B-GJ-08f" secondAttribute="trailing" constant="20" id="5vV-RK-sMA"/>
-                            <constraint firstItem="HXS-I1-UZV" firstAttribute="centerY" secondItem="XO9-vV-kAn" secondAttribute="centerY" id="CJ1-YY-kHi"/>
-                            <constraint firstItem="xIA-Ja-nOW" firstAttribute="top" secondItem="q4N-Hk-uqy" secondAttribute="bottom" constant="20" id="Gwa-Ky-RoJ"/>
-                            <constraint firstItem="XO9-vV-kAn" firstAttribute="leading" secondItem="xIA-Ja-nOW" secondAttribute="trailing" constant="20" id="HNT-y7-JYb"/>
+                            <constraint firstItem="0BN-33-B36" firstAttribute="top" secondItem="v3T-wX-gGD" secondAttribute="top" id="8wW-eR-3Zp"/>
+                            <constraint firstItem="0BN-33-B36" firstAttribute="bottom" secondItem="v3T-wX-gGD" secondAttribute="bottom" id="9xV-u8-ywH"/>
+                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="top" secondItem="fjr-og-KOj" secondAttribute="bottom" constant="8.5" id="JNS-NZ-Dsr"/>
+                            <constraint firstItem="fjr-og-KOj" firstAttribute="top" secondItem="jnd-KX-Lcf" secondAttribute="top" constant="229" id="KHN-fu-fbl"/>
+                            <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="v3T-wX-gGD" secondAttribute="trailing" constant="20" id="LfM-HK-q6h"/>
                             <constraint firstItem="l4B-GJ-08f" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" constant="20" id="Npl-wQ-467"/>
                             <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="HLe-Zq-fIJ" secondAttribute="trailing" id="OUJ-GZ-nOj"/>
                             <constraint firstItem="l4B-GJ-08f" firstAttribute="top" secondItem="NYC-nA-W3L" secondAttribute="top" constant="20" id="R7S-k0-JV1"/>
-                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="top" secondItem="xIA-Ja-nOW" secondAttribute="bottom" constant="20" id="aQX-dX-zkL"/>
+                            <constraint firstItem="0BN-33-B36" firstAttribute="top" secondItem="l4B-GJ-08f" secondAttribute="bottom" constant="16" id="VTj-pm-SLO"/>
                             <constraint firstItem="NYC-nA-W3L" firstAttribute="bottom" secondItem="HLe-Zq-fIJ" secondAttribute="bottom" id="atY-A0-49Q"/>
-                            <constraint firstItem="HXS-I1-UZV" firstAttribute="baseline" secondItem="xIA-Ja-nOW" secondAttribute="baseline" id="fHm-Mh-i6S"/>
                             <constraint firstItem="HLe-Zq-fIJ" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" id="gab-Px-ZmK"/>
-                            <constraint firstItem="HXS-I1-UZV" firstAttribute="leading" secondItem="XO9-vV-kAn" secondAttribute="trailing" constant="20" id="jp2-tl-RPY"/>
-                            <constraint firstItem="xIA-Ja-nOW" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" constant="20" id="xM5-3u-Kl8"/>
-                            <constraint firstItem="q4N-Hk-uqy" firstAttribute="centerX" secondItem="NYC-nA-W3L" secondAttribute="centerX" id="zwl-IS-1AO"/>
+                            <constraint firstItem="fjr-og-KOj" firstAttribute="leading" secondItem="0BN-33-B36" secondAttribute="leading" id="ndU-sY-MkP"/>
+                            <constraint firstItem="fjr-og-KOj" firstAttribute="leading" secondItem="l4B-GJ-08f" secondAttribute="leading" id="tnF-eI-Ka1"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="FMv-0g-juz">
+                    <navigationItem key="navigationItem" title="Create Training Session" id="FMv-0g-juz">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="jFh-XB-AHG">
                             <connections>
                                 <action selector="onSaveTrainingSession:" destination="kZc-k3-a9i" id="Ib6-ES-gjn"/>
@@ -244,8 +247,11 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="dateLabel" destination="q4N-Hk-uqy" id="tif-Bd-Iyv"/>
+                        <outlet property="datePicker" destination="0BN-33-B36" id="OwU-cW-kdp"/>
+                        <outlet property="endTimePicker" destination="bOo-x2-jgg" id="exL-10-PMi"/>
                         <outlet property="selectedWorkoutsTableView" destination="HLe-Zq-fIJ" id="Y8F-jE-8cA"/>
+                        <outlet property="startTimePicker" destination="7t7-2i-bZR" id="0HZ-PK-zzM"/>
+                        <outlet property="titleLabel" destination="l4B-GJ-08f" id="Bxz-Ah-2gE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtU-aB-3FQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
