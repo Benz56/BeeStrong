@@ -8,26 +8,23 @@
 import UIKit
 import GoogleSignIn
 import GoogleAPIClientForREST
+import GTMSessionFetcher
 
 class GoogleSignInViewController: UIViewController {
-    //Reference GIDSignInButton
-    //@IBOutlet weak var googleSigninButton: GIDSignInButton!
-    
-    var greetingLabel: UILabel!
     
     @IBOutlet weak var welcomeTitle: UILabel!
     @IBOutlet weak var welcomeMessage: UILabel!
     @IBOutlet weak var signInButton: UIButton!
     @IBOutlet weak var signOutButton: UIButton!
     
-    private let scopes = [kGTLRAuthScopeCalendarEvents]
-
-    private let service = GTLRCalendarService()
+    private let scopes = [kGTLRAuthScopeCalendarEvents, kGTLRAuthScopeCalendar]
+    
+    let googleCalendarAPI = GoogleCalendarAPI();
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        createDesign()
-        GIDSignIn.sharedInstance().scopes = scopes
+        // Sign-out button is hidden and disabled by default
+        enableButton(signOutButton, false)
         GIDSignIn.sharedInstance()?.presentingViewController = self
         updateScreen()
         // Register notification to update screen after user successfully signed in
@@ -44,6 +41,7 @@ class GoogleSignInViewController: UIViewController {
     }
     
     @IBAction func signInButtonTapped(_ sender: Any) {
+        GIDSignIn.sharedInstance()?.scopes.append(contentsOf: scopes)
         GIDSignIn.sharedInstance()?.signIn()
         updateScreen()
     }
@@ -51,14 +49,6 @@ class GoogleSignInViewController: UIViewController {
     @IBAction func signOutButtonTapped(_ sender: UIButton) {
         GIDSignIn.sharedInstance()?.signOut()
         updateScreen()
-    }
-    
-    func createDesign() {
-        signInButton.layer.cornerRadius = 5.0
-        signOutButton.layer.cornerRadius = 5.0
-        
-        // Sign-out button is hidden and disabled by default
-        enableButton(signOutButton, false)
     }
     
     func enableButton(_ button: UIButton,_ enable: Bool) {
@@ -96,8 +86,9 @@ class GoogleSignInViewController: UIViewController {
         }
     }
     
+    /// GOOGLE CALENDAR INTEGRATION
     
     @IBAction func createEventButtonTapped(_ sender: Any) {
-        
+        googleCalendarAPI.createTestEvent();
     }
 }

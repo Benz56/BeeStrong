@@ -14,7 +14,8 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     private var allWorkouts: [Workout]?
     @IBOutlet weak var selectedWorkoutsTableView: UITableView!
     @IBOutlet weak var dateLabel: UILabel!
-    var date: Date? 
+    var date: Date?
+    let googleCalendarAPI = GoogleCalendarAPI();
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,13 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         var workouts = [Workout]()
         selectedWorkoutsTableView.indexPathsForSelectedRows?.forEach{workouts.append((allWorkouts?[$0.row])!)}
         tsManager.add(for: date!, with: workouts) //TODO set the selected time on the date. It should really be an interval.
+        self.googleCalendarAPI.createEventEndpoint(name: "Training session", description: workouts.description, startDate: date ?? Date(), endDate: Date(timeInterval: 3600, since: date ?? Date()))
+        alertOnSave()
     }
-
+    
+    func alertOnSave() {
+        let inputAlert = UIAlertController(title: "Saved", message: "Training session is saved.", preferredStyle: .alert)
+        inputAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        self.present(inputAlert, animated: true, completion: nil)
+    }
 }

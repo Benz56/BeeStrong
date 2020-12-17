@@ -8,10 +8,11 @@
 import UIKit
 import GoogleSignIn
 import CoreData
+import GoogleAPIClientForREST
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
-    var currentUserName = ""
+    private let scopes = [kGTLRAuthScopeCalendarEvents, kGTLRAuthScopeCalendar]
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         if let error = error {
@@ -22,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             }
             return
         }
+        
         // Perform operations on signed in user here.
         let userId = user.userID                  // For client-side use only!
         let idToken = user.authentication.idToken // Safe to send to the server
@@ -30,7 +32,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             name: Notification.Name(rawValue: "ToggleAuthUINotification"),
             object: nil,
             userInfo: ["statusText": "Signed in user:\n\(fullName!)"])
-        printScopes()
     }
     
     func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
@@ -46,7 +47,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         // Initialize sign-in
         GIDSignIn.sharedInstance().clientID = "102352110855-vall5gr93l9bq2v90ck5vehdpqp73hm6.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().delegate = self
-        
+        GIDSignIn.sharedInstance()?.scopes.append(contentsOf: scopes)
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
         return true
@@ -76,12 +77,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     func application(_ application: UIApplication,
                      open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
         return GIDSignIn.sharedInstance().handle(url)
-    }
-    
-    func printScopes(){
-        let user = GIDSignIn.sharedInstance().currentUser
-        // Check if the user has granted the Drive scope
-        print(user?.grantedScopes as Any)
     }
     
     // MARK: - Core Data stack
