@@ -33,21 +33,56 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell") as! ExerciseTableViewCell
-        cell.reps.forEach{tf in
+        cell.repsTextFields.forEach{tf in
             tf.delegate = self
             tf.addTarget(self, action: #selector(textFieldEdited), for: .editingDidEnd)
+            tf.fieldType = .reps
+            tf.row = indexPath.row
         }
-        cell.kg.forEach{tf in
+        cell.kgTextFields.forEach{tf in
             tf.delegate = self
             tf.addTarget(self, action: #selector(textFieldEdited), for: .editingDidEnd)
+            tf.fieldType = .kg
+            tf.row = indexPath.row
         }
         let et = exercises[indexPath.row]
-        cell.title.text = et.exerciseType?.title
+        cell.titleLabel.text = et.exerciseType?.title
         return cell
     }
     
-    @objc func textFieldEdited(_ textField: UITextField) {
-        
+    //TODO Could use some refactoring.
+    @objc func textFieldEdited(_ textField: ExerciseTextField) {
+        let exercise = exercises[textField.row]
+        switch textField.fieldType {
+        case .kg:
+            if let weight = Double(textField.text!) {
+                if exercise.sets?.count ?? 0 <= textField.set {
+                    let workingSet = WorkingSet(context: workoutManager.context)
+                    workingSet.weight = weight
+                    exercise.addToSets(workingSet)
+                } else {
+                    (exercise.sets![textField.set] as! WorkingSet).weight = weight
+                }
+            } else {
+                textField.text = ""
+            }
+            break
+        case .reps:
+            if let reps = Int64(textField.text!) {
+                if exercise.sets?.count ?? 0 <= textField.set {
+                    let workingSet = WorkingSet(context: workoutManager.context)
+                    workingSet.repetitions = reps
+                    exercise.addToSets(workingSet)
+                } else {
+                    (exercise.sets![textField.set] as! WorkingSet).repetitions = reps
+                }
+            } else {
+                textField.text = ""
+            }
+            break
+        case .none:
+            break
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -57,9 +92,12 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func onSaveWorkout(_ sender: UIBarButtonItem) {
-        if !(workoutTitleLabel.text?.isEmpty ?? true) && exercises.count > 0 {            
-            workoutManager.add(title: title!, with: exercises)
+        let allDataEntered = exercises.allSatisfy{e in e.sets!.count > 0 && (e.sets?.array.map{$0 as! WorkingSet}.allSatisfy{ws in ws.weight > 0 && ws.repetitions > 0} ?? false)}
+        if !(workoutTitleLabel.text?.isEmpty ?? true) && exercises.count > 0 && allDataEntered {
+            workoutManager.add(title: workoutTitleLabel.text!, with: exercises)
             navigationController?.popViewController(animated: true)
+        } else {
+            //TODO Present alert with info why you cant save.
         }
     }
 }

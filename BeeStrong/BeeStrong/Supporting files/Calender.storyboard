@@ -147,13 +147,43 @@
                                 <rect key="frame" x="0.0" y="257" width="414" height="556"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" id="NjN-dr-AD9" customClass="WorkoutTableViewCell" customModule="BeeStrong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="97" id="NjN-dr-AD9" customClass="SavedWorkoutTableViewCell" customModule="BeeStrong" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="97"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NjN-dr-AD9" id="HAC-Az-TB2">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="97"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ikt-AX-IdS">
+                                                    <rect key="frame" x="20" y="20" width="374" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="rAy-iM-AEE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercises" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqb-5v-aaw">
+                                                    <rect key="frame" x="20" y="61" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Mqb-5v-aaw" firstAttribute="leading" secondItem="HAC-Az-TB2" secondAttribute="leading" constant="20" symbolic="YES" id="MaK-wT-gHu"/>
+                                                <constraint firstItem="Mqb-5v-aaw" firstAttribute="top" secondItem="Ikt-AX-IdS" secondAttribute="bottom" constant="20" id="kOl-MQ-s8L"/>
+                                                <constraint firstAttribute="bottom" secondItem="Mqb-5v-aaw" secondAttribute="bottom" constant="15" id="mBs-Yz-UHz"/>
+                                                <constraint firstAttribute="trailing" secondItem="Mqb-5v-aaw" secondAttribute="trailing" constant="20" id="sWc-bm-y5f"/>
+                                                <constraint firstItem="Ikt-AX-IdS" firstAttribute="top" secondItem="HAC-Az-TB2" secondAttribute="top" constant="20" id="tcS-lT-eVp"/>
+                                                <constraint firstItem="Ikt-AX-IdS" firstAttribute="leading" secondItem="HAC-Az-TB2" secondAttribute="leading" constant="20" symbolic="YES" id="vU5-fc-UWq"/>
+                                                <constraint firstAttribute="trailing" secondItem="Ikt-AX-IdS" secondAttribute="trailing" constant="20" id="wGT-6K-gDv"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="exercisesLabel" destination="Mqb-5v-aaw" id="crR-3E-QHh"/>
+                                            <outlet property="titleLabel" destination="Ikt-AX-IdS" id="7fU-8o-D3I"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

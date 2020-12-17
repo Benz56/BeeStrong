@@ -11,7 +11,7 @@ import CoreData
 
 class UpcomingSessionsUITableView: UITableView, UITableViewDelegate, UITableViewDataSource{
     
-    var traningSessionManager = TrainingSessionsManager()
+    let traningSessionManager = TrainingSessionsManager()
     var trainingSessions: [TrainingSession]?
     
     required init?(coder: NSCoder) {
