@@ -158,7 +158,7 @@ class GoogleCalendarAPI {
                 print(error!)
                 return
             }
-            print("Event created in Google Calendar: \(event.summary!) \(event.identifier!)")
+            print("Event created in Google Calendar: \(event.identifier!)")
         });
     }
     
