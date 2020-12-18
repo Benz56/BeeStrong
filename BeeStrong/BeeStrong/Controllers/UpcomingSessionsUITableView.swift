@@ -33,7 +33,7 @@ class UpcomingSessionsUITableView: UITableView, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "UpcomingTrainingSessionCell") as! UpcomingTrainingSessionCell
         let trainingSession = trainingSessions?[indexPath.row]
         
-        let date = (trainingSession?.value(forKey: "date") as! Date)
+        let date = (trainingSession?.value(forKey: "startDate") as! Date)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-YYYY HH.mm"
         

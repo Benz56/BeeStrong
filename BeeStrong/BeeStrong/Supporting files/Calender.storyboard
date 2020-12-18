@@ -138,14 +138,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Click to add a workout to the session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjr-og-KOj">
-                                <rect key="frame" x="20" y="229" width="284" height="19.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
-                                <nil key="textColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HLe-Zq-fIJ">
-                                <rect key="frame" x="0.0" y="257" width="414" height="556"/>
+                                <rect key="frame" x="0.0" y="359" width="414" height="454"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="454" id="tFx-A6-dBZ"/>
+                                </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutCell" rowHeight="97" id="NjN-dr-AD9" customClass="SavedWorkoutTableViewCell" customModule="BeeStrong" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="97"/>
@@ -187,56 +185,86 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-GJ-08f">
-                                <rect key="frame" x="20" y="108" width="374" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="v3T-wX-gGD">
-                                <rect key="frame" x="226" y="158" width="168" height="50"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="3f8-2F-uGM">
+                                <rect key="frame" x="20" y="110" width="374" height="223.5"/>
                                 <subviews>
-                                    <datePicker contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="7t7-2i-bZR">
-                                        <rect key="frame" x="0.0" y="0.0" width="68" height="50"/>
-                                        <locale key="locale" localeIdentifier="en_DK"/>
-                                    </datePicker>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uze-2h-VCp">
-                                        <rect key="frame" x="80" y="15" width="8" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l4B-GJ-08f">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="41.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5aj-S2-tfD">
+                                        <rect key="frame" x="0.0" y="45.5" width="374" height="41.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="efH-uC-2o2">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="41.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-33-B36">
+                                                <rect key="frame" x="251" y="0.0" width="123" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="123" id="6N7-FY-yrW"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="en_DK"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kUI-fX-G3c">
+                                        <rect key="frame" x="0.0" y="91" width="374" height="41.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MFY-Nx-CJo">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="41.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="06A-L2-QH7">
+                                                <rect key="frame" x="309" y="0.0" width="65" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="65" id="vCI-E2-hiY"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="en_DK"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="r1e-nX-FbS">
+                                        <rect key="frame" x="0.0" y="136.5" width="374" height="41.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="End time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rIO-9d-CcI">
+                                                <rect key="frame" x="0.0" y="0.0" width="67" height="41.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="15" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="A2s-GT-pc9">
+                                                <rect key="frame" x="310" y="0.0" width="64" height="41.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="64" id="E9z-nz-1tc"/>
+                                                </constraints>
+                                                <locale key="locale" localeIdentifier="en_DK"/>
+                                            </datePicker>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fjr-og-KOj">
+                                        <rect key="frame" x="0.0" y="182" width="374" height="41.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                         <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
                                     </label>
-                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="bOo-x2-jgg">
-                                        <rect key="frame" x="100" y="0.0" width="68" height="50"/>
-                                        <locale key="locale" localeIdentifier="en_DK"/>
-                                    </datePicker>
                                 </subviews>
                             </stackView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="0BN-33-B36">
-                                <rect key="frame" x="20" y="158" width="126" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="126" id="hUD-bt-AE9"/>
-                                </constraints>
-                                <locale key="locale" localeIdentifier="en_DK"/>
-                            </datePicker>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NYC-nA-W3L"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="fjr-og-KOj" firstAttribute="top" secondItem="0BN-33-B36" secondAttribute="bottom" constant="21" id="0mc-Gm-hMi"/>
-                            <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="l4B-GJ-08f" secondAttribute="trailing" constant="20" id="5vV-RK-sMA"/>
-                            <constraint firstItem="0BN-33-B36" firstAttribute="top" secondItem="v3T-wX-gGD" secondAttribute="top" id="8wW-eR-3Zp"/>
-                            <constraint firstItem="0BN-33-B36" firstAttribute="bottom" secondItem="v3T-wX-gGD" secondAttribute="bottom" id="9xV-u8-ywH"/>
-                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="top" secondItem="fjr-og-KOj" secondAttribute="bottom" constant="8.5" id="JNS-NZ-Dsr"/>
-                            <constraint firstItem="fjr-og-KOj" firstAttribute="top" secondItem="jnd-KX-Lcf" secondAttribute="top" constant="229" id="KHN-fu-fbl"/>
-                            <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="v3T-wX-gGD" secondAttribute="trailing" constant="20" id="LfM-HK-q6h"/>
-                            <constraint firstItem="l4B-GJ-08f" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" constant="20" id="Npl-wQ-467"/>
-                            <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="HLe-Zq-fIJ" secondAttribute="trailing" id="OUJ-GZ-nOj"/>
-                            <constraint firstItem="l4B-GJ-08f" firstAttribute="top" secondItem="NYC-nA-W3L" secondAttribute="top" constant="20" id="R7S-k0-JV1"/>
-                            <constraint firstItem="0BN-33-B36" firstAttribute="top" secondItem="l4B-GJ-08f" secondAttribute="bottom" constant="16" id="VTj-pm-SLO"/>
-                            <constraint firstItem="NYC-nA-W3L" firstAttribute="bottom" secondItem="HLe-Zq-fIJ" secondAttribute="bottom" id="atY-A0-49Q"/>
-                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" id="gab-Px-ZmK"/>
-                            <constraint firstItem="fjr-og-KOj" firstAttribute="leading" secondItem="0BN-33-B36" secondAttribute="leading" id="ndU-sY-MkP"/>
-                            <constraint firstItem="fjr-og-KOj" firstAttribute="leading" secondItem="l4B-GJ-08f" secondAttribute="leading" id="tnF-eI-Ka1"/>
+                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="centerX" secondItem="3f8-2F-uGM" secondAttribute="centerX" id="G8H-hk-URx"/>
+                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="firstBaseline" secondItem="3f8-2F-uGM" secondAttribute="baseline" constant="30" id="J7Y-hp-q2i"/>
+                            <constraint firstItem="3f8-2F-uGM" firstAttribute="top" secondItem="NYC-nA-W3L" secondAttribute="top" constant="22" id="Km8-yJ-9BI"/>
+                            <constraint firstItem="3f8-2F-uGM" firstAttribute="leading" secondItem="NYC-nA-W3L" secondAttribute="leading" constant="20" id="NRS-LM-AJm"/>
+                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="bottom" secondItem="NYC-nA-W3L" secondAttribute="bottom" id="c4r-F8-Z7P"/>
+                            <constraint firstItem="NYC-nA-W3L" firstAttribute="trailing" secondItem="3f8-2F-uGM" secondAttribute="trailing" constant="20" id="lGu-Wo-EZT"/>
+                            <constraint firstItem="HLe-Zq-fIJ" firstAttribute="leading" secondItem="jnd-KX-Lcf" secondAttribute="leading" id="xG6-9m-RCX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Create Training Session" id="FMv-0g-juz">
@@ -248,9 +276,9 @@
                     </navigationItem>
                     <connections>
                         <outlet property="datePicker" destination="0BN-33-B36" id="OwU-cW-kdp"/>
-                        <outlet property="endTimePicker" destination="bOo-x2-jgg" id="exL-10-PMi"/>
+                        <outlet property="endTimePicker" destination="A2s-GT-pc9" id="m88-Jm-SOt"/>
                         <outlet property="selectedWorkoutsTableView" destination="HLe-Zq-fIJ" id="Y8F-jE-8cA"/>
-                        <outlet property="startTimePicker" destination="7t7-2i-bZR" id="0HZ-PK-zzM"/>
+                        <outlet property="startTimePicker" destination="06A-L2-QH7" id="uTg-Gc-tdF"/>
                         <outlet property="titleLabel" destination="l4B-GJ-08f" id="Bxz-Ah-2gE"/>
                     </connections>
                 </viewController>

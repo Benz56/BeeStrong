@@ -10,9 +10,10 @@ import CoreData
 
 class TrainingSessionsManager: Manager {
     
-    func add(for date: Date, with workouts: [Workout]) {
+    func add(for startDate: Date, for endDate: Date, with workouts: [Workout]) {
         let ts = TrainingSession(context: context)
-        ts.date = date
+        ts.startDate = startDate
+        ts.endDate = endDate
         ts.workouts = NSSet(array: workouts)
         appDelegate.saveContext()
     }
@@ -24,7 +25,7 @@ class TrainingSessionsManager: Manager {
     
     func getAllTrainingSessions() -> [TrainingSession]? {
         let request: NSFetchRequest<TrainingSession> = TrainingSession.fetchRequest()
-        request.sortDescriptors = [NSSortDescriptor(key: "date", ascending: true)]
+        request.sortDescriptors = [NSSortDescriptor(key: "startDate", ascending: true)]
         return executeRequest(request)
     }
 }

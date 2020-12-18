@@ -63,7 +63,13 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         let tsManager = TrainingSessionsManager()
         var workouts = [Workout]()
         selectedWorkoutsTableView.indexPathsForSelectedRows?.forEach{workouts.append((allWorkouts?[$0.row])!)}
-        tsManager.add(for: date!, with: workouts) //TODO set the selected time on the date. It should really be an interval.
+        tsManager.add(for: getDate(timePicker: startTimePicker), for: getDate(timePicker: endTimePicker), with: workouts)
+        saveEventInGoogleCalendar(workouts)
+        alertOnSave()
+    }
+    
+    fileprivate func saveEventInGoogleCalendar(_ workouts: [Workout]) {
+        //TODO set the selected time on the date. It should really be an interval.
         var sessionDescription = "<h2>Workouts</h2>"
         for workout in workouts {
             let workoutTitle = workout.title ?? ""
@@ -71,8 +77,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
             sessionDescription += workoutToString(workout)
         }
         let title = titleLabel.text != nil ? titleLabel.text! : "Training session"
-        self.googleCalendarAPI.createEventEndpoint(name: title, description: sessionDescription, startDate: startTimePicker.date, endDate: endTimePicker.date)
-        alertOnSave()
+        self.googleCalendarAPI.createEventEndpoint(name: title, description: sessionDescription, startDate: getDate(timePicker: startTimePicker), endDate: getDate(timePicker: endTimePicker))
     }
     
     func alertOnSave() {
@@ -90,6 +95,13 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     }
     
     @objc func datePickerValueChanged(_ datePicker: UIDatePicker) {
-        endTimePicker.minimumDate = Date(timeInterval: 60, since: startTimePicker.date)
+        endTimePicker.minimumDate = startTimePicker.date
+    }
+    
+    /// To avoid mismatch between date picker and time pickers date and time are merged
+    func getDate (timePicker: UIDatePicker) -> Date {
+        let hour = Calendar.current.component(.hour, from: timePicker.date)
+        let minute = Calendar.current.component(.minute, from: timePicker.date)
+        return Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: self.datePicker.date)!
     }
 }
