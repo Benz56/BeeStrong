@@ -110,7 +110,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O0M-8Q-uu6" customClass="UpcomingSessionsUITableView" customModule="BeeStrong" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O0M-8Q-uu6">
                                 <rect key="frame" x="20" y="438" width="374" height="355"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -150,6 +150,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="wGT-fp-1Qa" id="a74-tC-VkE"/>
                                             <outlet property="workouts" destination="8Gn-XL-dGQ" id="PuY-Kd-oDx"/>
+                                            <segue destination="iUB-wZ-4DQ" kind="show" identifier="goToDetailView" id="TtW-CF-xCw"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -194,7 +195,7 @@
                     <tabBarItem key="tabBarItem" title="Home" id="1zQ-hX-XaH"/>
                     <navigationItem key="navigationItem" id="aeE-HK-IpA"/>
                     <connections>
-                        <outlet property="upcomingWorkoutsTableView" destination="O0M-8Q-uu6" id="6hE-Hq-dq9"/>
+                        <outlet property="upcomingSessionsTableView" destination="O0M-8Q-uu6" id="6hE-Hq-dq9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -377,6 +378,9 @@ your training sessions to Google Calendar.</string>
             <point key="canvasLocation" x="2149" y="796"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="TtW-CF-xCw"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

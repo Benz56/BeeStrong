@@ -11,6 +11,7 @@ class UpcomingTrainingSessionCell: UITableViewCell {
 
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var workouts: UILabel!
+    var trainingSession: TrainingSession?
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -11,6 +11,7 @@
 		4328800D258CE1070051D55D /* TrainingSessionDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4328800C258CE1070051D55D /* TrainingSessionDetailViewController.swift */; };
 		43288013258D04CA0051D55D /* WorkoutDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43288011258D04CA0051D55D /* WorkoutDetailTableViewCell.swift */; };
 		43288014258D04CA0051D55D /* WorkoutDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 43288012258D04CA0051D55D /* WorkoutDetailTableViewCell.xib */; };
+		43288017258D3F430051D55D /* UpcomingSessionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43288016258D3F430051D55D /* UpcomingSessionsViewController.swift */; };
 		43426EA12587A74300D7DDF1 /* GoogleSignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */; };
 		4347568725876884002F02D3 /* Calender.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568625876884002F02D3 /* Calender.storyboard */; };
 		4347568C258768DA002F02D3 /* Workouts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4347568B258768DA002F02D3 /* Workouts.storyboard */; };
@@ -49,6 +50,7 @@
 		4328800C258CE1070051D55D /* TrainingSessionDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionDetailViewController.swift; sourceTree = "<group>"; };
 		43288011258D04CA0051D55D /* WorkoutDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutDetailTableViewCell.swift; sourceTree = "<group>"; };
 		43288012258D04CA0051D55D /* WorkoutDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WorkoutDetailTableViewCell.xib; sourceTree = "<group>"; };
+		43288016258D3F430051D55D /* UpcomingSessionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsViewController.swift; sourceTree = "<group>"; };
 		43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInViewController.swift; sourceTree = "<group>"; };
 		4347568625876884002F02D3 /* Calender.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calender.storyboard; sourceTree = "<group>"; };
 		4347568B258768DA002F02D3 /* Workouts.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Workouts.storyboard; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */,
 				43FB305F258B9907009C1C26 /* ExerciseTextField.swift */,
 				4328800C258CE1070051D55D /* TrainingSessionDetailViewController.swift */,
+				43288016258D3F430051D55D /* UpcomingSessionsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				434962B725502A6700BC4077 /* HomeViewController.swift in Sources */,
 				434962B325502A6700BC4077 /* AppDelegate.swift in Sources */,
 				434962B525502A6700BC4077 /* SceneDelegate.swift in Sources */,
+				43288017258D3F430051D55D /* UpcomingSessionsViewController.swift in Sources */,
 				4376D4E6258A418000434DDD /* GoogleCalendarAPI.swift in Sources */,
 				43684016258A6A9E008AB322 /* WorkoutManager.swift in Sources */,
 				43FB3055258ABEC2009C1C26 /* ExerciesTypeSectionHeader.swift in Sources */,

@@ -8,13 +8,17 @@
 import UIKit
 import CoreData
 
-class TrainingSessionDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate  {
+class TrainingSessionDetailViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     
     let workoutManager = WorkoutManager()
     var workouts: [Workout]?
-    var exercises : [Exercise]?
+    var exercises: [Exercise]?
+    var trainingSession: TrainingSession?
     
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var workoutsTableView: UITableView!
+    var date: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,15 +26,20 @@ class TrainingSessionDetailViewController: UIViewController, UITableViewDelegate
         workoutsTableView.register(nib, forCellReuseIdentifier: "WorkoutDetailTableViewCell")
         workoutsTableView.delegate = self
         workoutsTableView.dataSource = self
+        dateLabel.text = date ?? ""
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        workouts = workoutManager.getAllWorkouts()
-        exercises = []
-        for workout in workouts! {
-            let workoutExercises = workout.exercises?.array.map{e in e as! Exercise}
-            if(workoutExercises != nil) {
-                exercises?.append(contentsOf: workoutExercises!)
+        if(trainingSession == nil) {
+            print("trainingSession is nil")
+        } else {
+            workouts = Array(trainingSession?.workouts as! Set<Workout>)
+            exercises = []
+            for workout in workouts! {
+                let workoutExercises = workout.exercises?.array.map{e in e as! Exercise}
+                if(workoutExercises != nil) {
+                    exercises?.append(contentsOf: workoutExercises!)
+                }
             }
         }
         workoutsTableView.reloadData()
