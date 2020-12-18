@@ -7,6 +7,8 @@
 
 import UIKit
 import CoreData
+import GoogleSignIn
+import GoogleAPIClientForREST
 
 class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -19,6 +21,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     @IBOutlet weak var endTimePicker: UIDatePicker!
     var date: Date?
     let googleCalendarAPI = GoogleCalendarAPI();
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,31 +67,50 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         var workouts = [Workout]()
         selectedWorkoutsTableView.indexPathsForSelectedRows?.forEach{workouts.append((allWorkouts?[$0.row])!)}
         tsManager.add(for: getDate(timePicker: startTimePicker), for: getDate(timePicker: endTimePicker), with: workouts)
-        saveEventInGoogleCalendar(workouts)
-        alertOnSave()
+        if GIDSignIn.sharedInstance()?.currentUser != nil {
+            saveEventInGoogleCalendar(workouts)
+            print("User is signed in. Event is saved.")
+            _ = self.navigationController?.popViewController(animated: true)
+        } else if (defaults.bool(forKey: "dontShowAgain")) {
+            print("Don't show is true.")
+            _ = self.navigationController?.popViewController(animated: true)
+        } else {
+            alertOnSave(workouts)
+        }
     }
     
-    fileprivate func saveEventInGoogleCalendar(_ workouts: [Workout]) {
+    private func saveEventInGoogleCalendar(_ workouts: [Workout]) {
         //TODO set the selected time on the date. It should really be an interval.
         var sessionDescription = "<h2>Workouts</h2>"
         for workout in workouts {
             let workoutTitle = workout.title ?? ""
-            sessionDescription += ("\n<b>" + workoutTitle + "</b>\n")
+            sessionDescription += ("\n<b>" + workoutTitle + "</b>")
             sessionDescription += workoutToString(workout)
         }
         let title = titleLabel.text != nil ? titleLabel.text! : "Training session"
         self.googleCalendarAPI.createEventEndpoint(name: title, description: sessionDescription, startDate: getDate(timePicker: startTimePicker), endDate: getDate(timePicker: endTimePicker))
     }
     
-    func alertOnSave() {
-        let inputAlert = UIAlertController(title: "Training session is saved", message: "If you are logged in with Google, an entry is created in Google Calendar as well.", preferredStyle: .alert)
-        inputAlert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (UIAlertAction) in
+    func alertOnSave(_ workouts: [Workout]) {
+        let inputAlert = UIAlertController(title: "Google Sign In", message: "You are not logged in with Google. If you sign in with Google, an entry is created in Google Calendar as well. Would you like to sign in?", preferredStyle: .alert)
+        inputAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (UIAlertAction) in
+            // Go to sign in. After sign in come back here and save to google calendar
+            GIDSignIn.sharedInstance()?.presentingViewController = self
+            GIDSignIn.sharedInstance()?.scopes.append(contentsOf: [kGTLRAuthScopeCalendarEvents, kGTLRAuthScopeCalendar])
+            GIDSignIn.sharedInstance()?.signIn()
+        }))
+        inputAlert.addAction(UIAlertAction(title: "No", style: .default, handler: { (UIAlertAction) in
+            _ = self.navigationController?.popViewController(animated: true)
+        }))
+        inputAlert.addAction(UIAlertAction(title: "Don't show again", style: .default, handler: { (UIAlertAction) in
+            //Remember this setting in storage
+            self.defaults.setValue(true, forKey: "dontShowAgain");
             _ = self.navigationController?.popViewController(animated: true)
         }))
         self.present(inputAlert, animated: true)
     }
     
-    fileprivate func workoutToString(_ workout: Workout?) -> String {
+    private func workoutToString(_ workout: Workout?) -> String {
         return workout?.exercises?.array.map{e in e as! Exercise}.map{e in
             "\(e.exerciseType!.title!) \n   " + e.sets!.array.map{s in s as! WorkingSet}.map{s in "\(s.repetitions) reps @ \(s.weight) kg"}.joined(separator: "\n   ")
         }.joined(separator: "\n") ?? "?"
