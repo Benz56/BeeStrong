@@ -84,7 +84,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         var sessionDescription = "<h2>Workouts</h2>"
         for workout in workouts {
             let workoutTitle = workout.title ?? ""
-            sessionDescription += ("\n<b>" + workoutTitle + "</b>")
+            sessionDescription += ("\n<b>" + workoutTitle + "</b>\n")
             sessionDescription += workoutToString(workout)
         }
         let title = titleLabel.text != nil ? titleLabel.text! : "Training session"
