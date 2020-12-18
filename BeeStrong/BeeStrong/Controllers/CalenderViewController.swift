@@ -67,10 +67,6 @@ class CalenderViewController: UIViewController, CalendarViewDataSource, Calendar
     func calendar(_ calendar: CalendarView, didLongPressDate date: Date, withEvents events: [CalendarEvent]?) {
     }
     
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        return identifier == "NewTrainingSession" && calendar.selectedDates.count == 1
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if (segue.identifier == "NewTrainingSession") {
             (segue.destination as! AddTrainingSessionViewController).date = calendar.selectedDates.first
