@@ -262,7 +262,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="fcP-1h-kdb" userLabel="Sign In Stack View">
-                                <rect key="frame" x="62.5" y="186" width="289" height="174.5"/>
+                                <rect key="frame" x="62.5" y="186" width="289" height="210.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign in..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l57-Hx-Ery">
                                         <rect key="frame" x="82.5" y="0.0" width="124" height="20.5"/>
@@ -326,6 +326,23 @@ your training sessions to Google Calendar.</string>
                                             <action selector="createEventButtonTapped:" destination="3UP-qq-kNn" eventType="touchUpInside" id="RSF-Br-Eys"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ7-Gm-ll7">
+                                        <rect key="frame" x="33" y="182.5" width="223" height="28"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <inset key="contentEdgeInsets" minX="25" minY="5" maxX="25" maxY="5"/>
+                                        <state key="normal" title="Open workout detail view">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="createEventButtonTapped:" destination="3UP-qq-kNn" eventType="touchUpInside" id="pcL-8x-6gq"/>
+                                            <segue destination="iUB-wZ-4DQ" kind="show" id="vDc-aP-h1v"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -347,6 +364,17 @@ your training sessions to Google Calendar.</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSZ-s4-YPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1492.753623188406" y="825.66964285714278"/>
+        </scene>
+        <!--WorkoutDetails-->
+        <scene sceneID="zE4-70-MuZ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="WorkoutDetails" id="iUB-wZ-4DQ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Xlg-a5-77V"/>
+                    <navigationItem key="navigationItem" id="RhA-Nr-f8r"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P6l-NN-pjt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2149" y="796"/>
         </scene>
     </scenes>
     <resources>

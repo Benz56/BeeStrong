@@ -41,4 +41,8 @@ class UpcomingSessionsUITableView: UITableView, UITableViewDelegate, UITableView
         cell.workouts.text = Array(trainingSession?.workouts as! Set<Workout>).map{$0.title!}.joined(separator: "\n")
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Seque here.")
+    }
 }
