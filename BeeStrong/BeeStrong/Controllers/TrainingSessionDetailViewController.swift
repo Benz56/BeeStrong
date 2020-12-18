@@ -30,9 +30,7 @@ class TrainingSessionDetailViewController: UIViewController, UITableViewDelegate
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        if(trainingSession == nil) {
-            print("trainingSession is nil")
-        } else {
+        if(trainingSession != nil) {
             workouts = Array(trainingSession?.workouts as! Set<Workout>)
             exercises = []
             for workout in workouts! {
