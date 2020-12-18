@@ -16,7 +16,9 @@ class ExerciseTableViewCell: UITableViewCell {
     @IBOutlet var kgTextFields: [ExerciseTextField]!
     
     @IBAction func onAddSet(_ sender: UIButton) {
-        //TODO
+        let alert = UIAlertController(title: "Dynamic Sets", message: "Under construction 🏗️", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+        UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true, completion: nil)
     }
     
     override func awakeFromNib() {

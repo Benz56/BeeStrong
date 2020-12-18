@@ -33,17 +33,19 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ExerciseCell") as! ExerciseTableViewCell
-        cell.repsTextFields.forEach{tf in
+        for (i, tf) in cell.repsTextFields.enumerated() {
             tf.delegate = self
             tf.addTarget(self, action: #selector(textFieldEdited), for: .editingDidEnd)
             tf.fieldType = .reps
             tf.row = indexPath.row
+            tf.set = i
         }
-        cell.kgTextFields.forEach{tf in
+        for (i, tf) in cell.kgTextFields.enumerated() {
             tf.delegate = self
             tf.addTarget(self, action: #selector(textFieldEdited), for: .editingDidEnd)
             tf.fieldType = .kg
             tf.row = indexPath.row
+            tf.set = i
         }
         let et = exercises[indexPath.row]
         cell.titleLabel.text = et.exerciseType?.title
@@ -97,7 +99,9 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
             workoutManager.add(title: workoutTitleLabel.text!, with: exercises)
             navigationController?.popViewController(animated: true)
         } else {
-            
+            let alert = UIAlertController(title: "Missing Input", message: "Please make sure that you have entered a title and valid numbers in all REPS/KG input fields.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Close", style: .cancel, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }
