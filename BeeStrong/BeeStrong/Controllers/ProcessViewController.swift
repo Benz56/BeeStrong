@@ -60,7 +60,6 @@ class ProcessViewController: UIViewController, ChartViewDelegate, UIPickerViewDa
         set1.fill = Fill(color: .white)
         set1.fillAlpha = 0.5
         set1.drawFilledEnabled = true
-        set1.drawHorizontalHighlightIndicatorEnabled = false
         
         let data = LineChartData(dataSet: set1)
         lineChartView.data = data
