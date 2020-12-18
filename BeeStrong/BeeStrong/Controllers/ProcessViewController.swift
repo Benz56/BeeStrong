@@ -102,7 +102,7 @@ class ProcessViewController: UIViewController, ChartViewDelegate, UIPickerViewDa
         ChartDataEntry(x: 17, y: 48),
         ChartDataEntry(x: 21, y: 51),
         ChartDataEntry(x: 24, y: 53),
-        ChartDataEntry(x: 28, y: 55),
+        ChartDataEntry(x: 28, y: 53),
         ChartDataEntry(x: 31, y: 55),
     ]
     
