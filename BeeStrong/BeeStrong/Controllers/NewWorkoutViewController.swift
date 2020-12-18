@@ -94,8 +94,8 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     @IBAction func onSaveWorkout(_ sender: UIBarButtonItem) {
-        let allDataEntered = exercises.allSatisfy{e in e.sets!.count > 0 && (e.sets?.array.map{$0 as! WorkingSet}.allSatisfy{ws in ws.weight > 0 && ws.repetitions > 0} ?? false)}
-        if !(workoutTitleLabel.text?.isEmpty ?? true) && exercises.count > 0 && allDataEntered {
+        let allDataEntered = exercises.allSatisfy{e in e.sets!.count > 0 && (e.sets?.array.map{$0 as! WorkingSet}.allSatisfy{ws in ws.weight >= 0 && ws.repetitions >= 0} ?? false)}
+        if !(workoutTitleLabel.text?.isEmpty == true) && exercises.count > 0 && allDataEntered {
             workoutManager.add(title: workoutTitleLabel.text!, with: exercises)
             navigationController?.popViewController(animated: true)
         } else {
