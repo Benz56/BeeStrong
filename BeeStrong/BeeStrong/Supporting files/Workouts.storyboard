@@ -116,11 +116,11 @@
                                 <rect key="frame" x="0.0" y="202.5" width="414" height="540.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseCell" rowHeight="155" id="fyz-60-UbV" customClass="ExerciseTableViewCell" customModule="BeeStrong" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="155"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ExerciseCell" rowHeight="263" id="fyz-60-UbV" customClass="ExerciseTableViewCell" customModule="BeeStrong" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="263"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fyz-60-UbV" id="7Ap-63-AGz">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="155"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="263"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ssI-pj-I0N">
@@ -156,7 +156,13 @@
                                                     <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72j-Wp-vOd">
-                                                    <rect key="frame" x="40" y="101" width="7.5" height="20.5"/>
+                                                    <rect key="frame" x="37" y="108" width="8" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Gq-ty-qkH">
+                                                    <rect key="frame" x="37" y="162" width="10" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -176,25 +182,75 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1MS-sK-uhZ" customClass="ExerciseTextField" customModule="BeeStrong" customModuleProvider="target">
+                                                    <rect key="frame" x="167" y="155" width="80" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="4Fh-BE-snf"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AJi-LH-DHz" customClass="ExerciseTextField" customModule="BeeStrong" customModuleProvider="target">
+                                                    <rect key="frame" x="314" y="155" width="80" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="4A7-O3-oYH"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fKv-0R-gIi" customClass="ExerciseTextField" customModule="BeeStrong" customModuleProvider="target">
+                                                    <rect key="frame" x="314" y="209" width="80" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="udv-9Q-Tnz"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uBX-rg-ROw" customClass="ExerciseTextField" customModule="BeeStrong" customModuleProvider="target">
+                                                    <rect key="frame" x="167" y="209" width="80" height="34"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="80" id="Ea9-Jl-tzm"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                </textField>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eq9-iG-fkL">
+                                                    <rect key="frame" x="37" y="216" width="11" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="d9I-rt-YQH" firstAttribute="centerX" secondItem="7Ap-63-AGz" secondAttribute="centerX" id="28Q-zp-QcW"/>
                                                 <constraint firstItem="fiq-Lq-b1H" firstAttribute="top" secondItem="7Ap-63-AGz" secondAttribute="top" constant="20" id="5nA-oA-uY3"/>
+                                                <constraint firstItem="6Gq-ty-qkH" firstAttribute="leading" secondItem="7Ap-63-AGz" secondAttribute="leading" constant="37" id="5st-En-Nnc"/>
                                                 <constraint firstItem="MG6-Pm-bss" firstAttribute="top" secondItem="JSB-Fh-6Ah" secondAttribute="bottom" constant="20" id="6Qk-Fx-rnh"/>
+                                                <constraint firstItem="Eq9-iG-fkL" firstAttribute="leading" secondItem="7Ap-63-AGz" secondAttribute="leading" constant="37" id="6c8-nu-t5G"/>
+                                                <constraint firstItem="fKv-0R-gIi" firstAttribute="top" secondItem="AJi-LH-DHz" secondAttribute="bottom" constant="20" id="AkY-5u-wxc"/>
+                                                <constraint firstItem="uBX-rg-ROw" firstAttribute="top" secondItem="1MS-sK-uhZ" secondAttribute="bottom" constant="20" id="CVM-4v-jPJ"/>
+                                                <constraint firstItem="1MS-sK-uhZ" firstAttribute="centerX" secondItem="7Ap-63-AGz" secondAttribute="centerX" id="FpD-NL-19M"/>
                                                 <constraint firstAttribute="trailing" secondItem="fiq-Lq-b1H" secondAttribute="trailing" constant="20" id="KPz-gZ-dai"/>
                                                 <constraint firstItem="ssI-pj-I0N" firstAttribute="top" secondItem="7Ap-63-AGz" secondAttribute="top" constant="20" id="Lfq-zz-Smc"/>
-                                                <constraint firstItem="72j-Wp-vOd" firstAttribute="leading" secondItem="7Ap-63-AGz" secondAttribute="leading" constant="40" id="MtO-tF-j0R"/>
                                                 <constraint firstItem="q1c-er-jxc" firstAttribute="top" secondItem="ssI-pj-I0N" secondAttribute="bottom" constant="20" id="N5H-oT-5Hw"/>
+                                                <constraint firstItem="72j-Wp-vOd" firstAttribute="top" secondItem="q1c-er-jxc" secondAttribute="bottom" constant="27" id="QJJ-s4-g6i"/>
+                                                <constraint firstItem="1MS-sK-uhZ" firstAttribute="top" secondItem="d9I-rt-YQH" secondAttribute="bottom" constant="20" id="RBI-H0-XtH"/>
                                                 <constraint firstItem="ssI-pj-I0N" firstAttribute="leading" secondItem="7Ap-63-AGz" secondAttribute="leading" constant="20" id="RFR-oC-yxh"/>
-                                                <constraint firstAttribute="bottom" secondItem="d9I-rt-YQH" secondAttribute="bottom" constant="20" symbolic="YES" id="Ts7-go-c9U"/>
+                                                <constraint firstAttribute="trailing" secondItem="AJi-LH-DHz" secondAttribute="trailing" constant="20" symbolic="YES" id="VzL-aD-PCF"/>
+                                                <constraint firstAttribute="trailing" secondItem="fKv-0R-gIi" secondAttribute="trailing" constant="20" symbolic="YES" id="aTo-wq-ppq"/>
+                                                <constraint firstItem="uBX-rg-ROw" firstAttribute="centerX" secondItem="7Ap-63-AGz" secondAttribute="centerX" id="hK0-7H-eQa"/>
+                                                <constraint firstItem="AJi-LH-DHz" firstAttribute="top" secondItem="MG6-Pm-bss" secondAttribute="bottom" constant="20" id="hMX-bR-7hh"/>
                                                 <constraint firstItem="JSB-Fh-6Ah" firstAttribute="top" secondItem="ssI-pj-I0N" secondAttribute="bottom" constant="20" id="hlZ-hM-asd"/>
                                                 <constraint firstAttribute="trailing" secondItem="MG6-Pm-bss" secondAttribute="trailing" constant="20" symbolic="YES" id="imp-z1-cdT"/>
-                                                <constraint firstItem="72j-Wp-vOd" firstAttribute="top" secondItem="q1c-er-jxc" secondAttribute="bottom" constant="20" id="pzd-RC-rHi"/>
+                                                <constraint firstAttribute="bottom" secondItem="uBX-rg-ROw" secondAttribute="bottom" constant="20" symbolic="YES" id="k9H-76-932"/>
+                                                <constraint firstItem="Eq9-iG-fkL" firstAttribute="top" secondItem="6Gq-ty-qkH" secondAttribute="bottom" constant="33" id="qlr-Xx-yzk"/>
                                                 <constraint firstItem="pAr-3a-rWc" firstAttribute="centerX" secondItem="7Ap-63-AGz" secondAttribute="centerX" id="qqh-7O-NJW"/>
                                                 <constraint firstItem="d9I-rt-YQH" firstAttribute="top" secondItem="pAr-3a-rWc" secondAttribute="bottom" constant="20" id="qxK-a3-OWh"/>
                                                 <constraint firstItem="pAr-3a-rWc" firstAttribute="top" secondItem="ssI-pj-I0N" secondAttribute="bottom" constant="20" id="uzR-LO-jW4"/>
                                                 <constraint firstAttribute="trailing" secondItem="JSB-Fh-6Ah" secondAttribute="trailing" constant="20" id="wUM-vg-srM"/>
                                                 <constraint firstItem="q1c-er-jxc" firstAttribute="leading" secondItem="7Ap-63-AGz" secondAttribute="leading" constant="20" id="x4o-us-cxY"/>
+                                                <constraint firstItem="6Gq-ty-qkH" firstAttribute="top" secondItem="72j-Wp-vOd" secondAttribute="bottom" constant="33" id="xb8-9f-b0P"/>
+                                                <constraint firstItem="72j-Wp-vOd" firstAttribute="leading" secondItem="7Ap-63-AGz" secondAttribute="leading" constant="37" id="zRh-5J-3Bf"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -202,6 +258,12 @@
                                             <outletCollection property="setLabels" destination="72j-Wp-vOd" collectionClass="NSMutableArray" id="1Gj-dR-0rs"/>
                                             <outletCollection property="kgTextFields" destination="MG6-Pm-bss" collectionClass="NSMutableArray" id="6YM-mg-jqh"/>
                                             <outletCollection property="repsTextFields" destination="d9I-rt-YQH" collectionClass="NSMutableArray" id="JDv-ia-ny6"/>
+                                            <outletCollection property="kgTextFields" destination="AJi-LH-DHz" collectionClass="NSMutableArray" id="QKP-tq-P3l"/>
+                                            <outletCollection property="kgTextFields" destination="fKv-0R-gIi" collectionClass="NSMutableArray" id="20O-sq-SzV"/>
+                                            <outletCollection property="repsTextFields" destination="1MS-sK-uhZ" collectionClass="NSMutableArray" id="9aq-OS-PH5"/>
+                                            <outletCollection property="repsTextFields" destination="uBX-rg-ROw" collectionClass="NSMutableArray" id="ntK-4q-qHp"/>
+                                            <outletCollection property="setLabels" destination="6Gq-ty-qkH" collectionClass="NSMutableArray" id="oe8-L4-38T"/>
+                                            <outletCollection property="setLabels" destination="Eq9-iG-fkL" collectionClass="NSMutableArray" id="cIX-ci-FQJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
