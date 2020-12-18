@@ -34,6 +34,8 @@ class ExerciseTypeManager: Manager {
             add(title: "Deadlift", bodyPart: "Back")
             add(title: "Crunches", bodyPart: "Core")
             add(title: "Burpees", bodyPart: "Body")
+            add(title: "Bench Press", bodyPart: "Chest")
+            add(title: "Biceps Curls", bodyPart: "Arms")
             add(title: "Pull ups", bodyPart: "Arms")
         }
     }

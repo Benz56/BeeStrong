@@ -28,6 +28,10 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return exercises.count
     }
     
@@ -37,17 +41,17 @@ class NewWorkoutViewController: UIViewController, UITableViewDelegate, UITableVi
             tf.delegate = self
             tf.addTarget(self, action: #selector(textFieldEdited), for: .editingDidEnd)
             tf.fieldType = .reps
-            tf.row = indexPath.row
+            tf.row = indexPath.section
             tf.set = i
         }
         for (i, tf) in cell.kgTextFields.enumerated() {
             tf.delegate = self
             tf.addTarget(self, action: #selector(textFieldEdited), for: .editingDidEnd)
             tf.fieldType = .kg
-            tf.row = indexPath.row
+            tf.row = indexPath.section
             tf.set = i
         }
-        let et = exercises[indexPath.row]
+        let et = exercises[indexPath.section]
         cell.titleLabel.text = et.exerciseType?.title
         return cell
     }
