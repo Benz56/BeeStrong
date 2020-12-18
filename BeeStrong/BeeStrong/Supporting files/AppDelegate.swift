@@ -50,6 +50,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance()?.scopes.append(contentsOf: scopes)
         // Automatically sign in the user.
         GIDSignIn.sharedInstance()?.restorePreviousSignIn()
+        let exerciseTypeManager: ExerciseTypeManager = ExerciseTypeManager()
+        exerciseTypeManager.addSuggestedExercises()
         return true
     }
     

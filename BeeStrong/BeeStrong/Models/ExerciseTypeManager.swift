@@ -27,4 +27,14 @@ class ExerciseTypeManager: Manager {
         request.sortDescriptors = [NSSortDescriptor(key: "title", ascending: true)]
         return executeRequest(request)
     }
+    
+    func addSuggestedExercises(){
+        if getAllExerciseTypes()?.isEmpty == true {
+            add(title: "Squats", bodyPart: "Glutes")
+            add(title: "Deadlift", bodyPart: "Back")
+            add(title: "Crunches", bodyPart: "Core")
+            add(title: "Burpees", bodyPart: "Body")
+            add(title: "Pull ups", bodyPart: "Arms")
+        }
+    }
 }
