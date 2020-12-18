@@ -13,11 +13,10 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
     let traningSessionManager = TrainingSessionsManager()
     var trainingSessions: [TrainingSession]?
     let dateFormatter = DateFormatter()
-    
-    @IBOutlet weak var upcomingSessionsTableView: UpcomingSessionsUITableView!
-    
     var selectedDate = "No date specified"
     var selectedTrainingSession: TrainingSession?
+    
+    @IBOutlet weak var upcomingSessionsTableView: UITableView!
     
     @IBAction func onCalenderTouched(_ sender: UIButton) {
         selectController(type: CalenderViewController.self)

@@ -27,7 +27,6 @@
 		434962FD255052C200BC4077 /* ProcessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 434962FC255052C200BC4077 /* ProcessViewController.swift */; };
 		43684005258A4606008AB322 /* TrainingSessionsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684004258A4606008AB322 /* TrainingSessionsManager.swift */; };
 		43684009258A475B008AB322 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684008258A475B008AB322 /* Manager.swift */; };
-		43684012258A6421008AB322 /* UpcomingSessionsUITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684011258A6421008AB322 /* UpcomingSessionsUITableView.swift */; };
 		43684016258A6A9E008AB322 /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43684015258A6A9E008AB322 /* WorkoutManager.swift */; };
 		436FED76258A34D9009F8370 /* BeeStrong.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 436FED74258A34D9009F8370 /* BeeStrong.xcdatamodeld */; };
 		4376D4E6258A418000434DDD /* GoogleCalendarAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4376D4E5258A418000434DDD /* GoogleCalendarAPI.swift */; };
@@ -68,7 +67,6 @@
 		434962FC255052C200BC4077 /* ProcessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProcessViewController.swift; sourceTree = "<group>"; };
 		43684004258A4606008AB322 /* TrainingSessionsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSessionsManager.swift; sourceTree = "<group>"; };
 		43684008258A475B008AB322 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
-		43684011258A6421008AB322 /* UpcomingSessionsUITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingSessionsUITableView.swift; sourceTree = "<group>"; };
 		43684015258A6A9E008AB322 /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
 		436FED75258A34D9009F8370 /* BeeStrong.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BeeStrong.xcdatamodel; sourceTree = "<group>"; };
 		4376D4E3258A324200434DDD /* Google-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Google-Header.h"; sourceTree = SOURCE_ROOT; };
@@ -201,7 +199,6 @@
 				434962FC255052C200BC4077 /* ProcessViewController.swift */,
 				43426EA02587A74300D7DDF1 /* GoogleSignInViewController.swift */,
 				4376D4E5258A418000434DDD /* GoogleCalendarAPI.swift */,
-				43684011258A6421008AB322 /* UpcomingSessionsUITableView.swift */,
 				43AE0784258A787D00FDBFE9 /* AddTrainingSessionViewController.swift */,
 				43FB3051258ABA2D009C1C26 /* ExerciseTypeViewController.swift */,
 				43FB305B258B6ED2009C1C26 /* NewWorkoutViewController.swift */,
@@ -361,7 +358,6 @@
 				43FB3044258AB823009C1C26 /* ExerciseTypeCollectionViewCell.swift in Sources */,
 				4328800D258CE1070051D55D /* TrainingSessionDetailViewController.swift in Sources */,
 				43FB3059258B6D35009C1C26 /* ExerciseTableViewCell.swift in Sources */,
-				43684012258A6421008AB322 /* UpcomingSessionsUITableView.swift in Sources */,
 				434962F02550503B00BC4077 /* CalenderViewController.swift in Sources */,
 				434962F82550506700BC4077 /* WorkoutsViewController.swift in Sources */,
 				43AE0785258A787D00FDBFE9 /* AddTrainingSessionViewController.swift in Sources */,

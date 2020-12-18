@@ -12,7 +12,7 @@ class UpcomingSessionsViewController: UIViewController, UITableViewDelegate, UIT
     let traningSessionManager = TrainingSessionsManager()
     var trainingSessions: [TrainingSession]?
     
-    @IBOutlet var upcomingSessionsTableView: UpcomingSessionsUITableView!
+    @IBOutlet var upcomingSessionsTableView: UITableView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
