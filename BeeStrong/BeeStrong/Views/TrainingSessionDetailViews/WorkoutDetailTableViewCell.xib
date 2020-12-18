@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="WorkoutDetailTableViewCell" rowHeight="299" id="KGk-i7-Jjw" customClass="WorkoutDetailTableViewCell" customModule="BeeStrong" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="391" height="299"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="391" height="299"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZu-X9-fgZ">
+                        <rect key="frame" x="15" y="15" width="361" height="269"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="NZu-X9-fgZ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="V1Z-dx-QRA"/>
+                    <constraint firstItem="NZu-X9-fgZ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="15" id="eFn-r2-M9c"/>
+                    <constraint firstAttribute="bottom" secondItem="NZu-X9-fgZ" secondAttribute="bottom" constant="15" id="gUG-gv-ckJ"/>
+                    <constraint firstAttribute="trailing" secondItem="NZu-X9-fgZ" secondAttribute="trailing" constant="15" id="mn0-ON-inz"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="title" destination="NZu-X9-fgZ" id="aCS-1l-lWF"/>
+            </connections>
+            <point key="canvasLocation" x="192.0289855072464" y="238.72767857142856"/>
+        </tableViewCell>
+    </objects>
+</document>
