@@ -43,6 +43,8 @@ class ProcessViewController: UIViewController, ChartViewDelegate, UIPickerViewDa
         lineChartView.centerInSuperview()
         lineChartView.width(to: view)
         lineChartView.heightToWidth(of: view)
+        
+        benchpress()
     }
     
     func chartValueSelected(_ chartView: ChartViewBase, entry: ChartDataEntry, highlight: Highlight) {
@@ -58,10 +60,12 @@ class ProcessViewController: UIViewController, ChartViewDelegate, UIPickerViewDa
         set1.fill = Fill(color: .white)
         set1.fillAlpha = 0.5
         set1.drawFilledEnabled = true
+        set1.drawHorizontalHighlightIndicatorEnabled = false
         
         let data = LineChartData(dataSet: set1)
         lineChartView.data = data
         data.setDrawValues(false)
+        lineChartView.animate(xAxisDuration: 2.5)
     }
     
     func squats(){
@@ -77,6 +81,7 @@ class ProcessViewController: UIViewController, ChartViewDelegate, UIPickerViewDa
         let data = LineChartData(dataSet: set2)
         lineChartView.data = data
         data.setDrawValues(false)
+        lineChartView.animate(xAxisDuration: 2.5)
     }
     
     let benchPress : [ChartDataEntry] = [
