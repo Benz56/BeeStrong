@@ -126,16 +126,4 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         let minute = Calendar.current.component(.minute, from: timePicker.date)
         return Calendar.current.date(bySettingHour: hour, minute: minute, second: 0, of: self.datePicker.date)!
     }
-    
-    @objc func checkBoxAction(_ sender: UIButton){
-        if sender.isSelected {
-            sender.isSelected = false
-            let btnImage    = UIImage(named: "checkBoxImage")!
-            sender.setBackgroundImage(btnImage, for: UIControl.State.init())
-        } else {
-            sender.isSelected = true
-            let btnImage    = UIImage(named: "unCheckBoxImage")!
-            sender.setBackgroundImage(btnImage, for: UIControl.State.init())
-        }
-    }
 }
