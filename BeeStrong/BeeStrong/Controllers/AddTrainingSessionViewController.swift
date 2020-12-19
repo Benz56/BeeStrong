@@ -66,11 +66,12 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         let tsManager = TrainingSessionsManager()
         var workouts = [Workout]()
         selectedWorkoutsTableView.indexPathsForSelectedRows?.forEach{workouts.append((allWorkouts?[$0.row])!)}
-        tsManager.add(for: getDate(timePicker: startTimePicker), for: getDate(timePicker: endTimePicker), with: workouts)
         if GIDSignIn.sharedInstance()?.currentUser != nil {
+            tsManager.add(for: getDate(timePicker: startTimePicker), for: getDate(timePicker: endTimePicker), with: workouts)
             saveEventInGoogleCalendar(workouts)
             _ = self.navigationController?.popViewController(animated: true)
         } else if (defaults.bool(forKey: "dontShowAgain")) {
+            tsManager.add(for: getDate(timePicker: startTimePicker), for: getDate(timePicker: endTimePicker), with: workouts)
             _ = self.navigationController?.popViewController(animated: true)
         } else {
             alertOnSave(workouts)
