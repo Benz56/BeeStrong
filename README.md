@@ -44,8 +44,8 @@ Use at least two of the following:
 
 <p float="left">
 <img src="Screenshots/Progress.png" width="200"/>
-<img src="Screenshots/SignIn.png" width="200"/>
 <img src="Screenshots/MarkFinishedExercises.png" width="200"/>
+<img src="Screenshots/GoogleCalendarEntry.png" width="200"/>
 </p>
 
 ### Get Started
