@@ -1,28 +1,29 @@
 //
-//  UpcomingSessionsUITableView.swift
+//  UpcomingSessionsViewController.swift
 //  BeeStrong
 //
-//  Created by Benjamin Staugaard on 16/12/2020.
+//  Created by Sofie Louise Madsen on 18/12/2020.
 //
 
-import Foundation
 import UIKit
-import CoreData
 
-class UpcomingSessionsUITableView: UITableView, UITableViewDelegate, UITableViewDataSource{
+class UpcomingSessionsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let traningSessionManager = TrainingSessionsManager()
     var trainingSessions: [TrainingSession]?
     
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-        delegate = self
-        dataSource = self
+    @IBOutlet var upcomingSessionsTableView: UITableView!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        upcomingSessionsTableView.delegate = self
+        upcomingSessionsTableView.dataSource = self
+        // Do any additional setup after loading the view.
     }
     
-    override func reloadData() {
+    override func viewDidAppear(_ animated: Bool) {
         trainingSessions = traningSessionManager.getAllTrainingSessions()
-        super.reloadData()
+        upcomingSessionsTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,4 +42,9 @@ class UpcomingSessionsUITableView: UITableView, UITableViewDelegate, UITableView
         cell.workouts.text = Array(trainingSession?.workouts as! Set<Workout>).map{$0.title!}.joined(separator: "\n")
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
+
 }

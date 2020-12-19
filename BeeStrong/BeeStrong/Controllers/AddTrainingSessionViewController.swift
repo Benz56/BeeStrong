@@ -69,10 +69,8 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         tsManager.add(for: getDate(timePicker: startTimePicker), for: getDate(timePicker: endTimePicker), with: workouts)
         if GIDSignIn.sharedInstance()?.currentUser != nil {
             saveEventInGoogleCalendar(workouts)
-            print("User is signed in. Event is saved.")
             _ = self.navigationController?.popViewController(animated: true)
         } else if (defaults.bool(forKey: "dontShowAgain")) {
-            print("Don't show is true.")
             _ = self.navigationController?.popViewController(animated: true)
         } else {
             alertOnSave(workouts)
@@ -84,7 +82,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
         var sessionDescription = "<h2>Workouts</h2>"
         for workout in workouts {
             let workoutTitle = workout.title ?? ""
-            sessionDescription += ("\n<b>" + workoutTitle + "</b>")
+            sessionDescription += ("\n<b>" + workoutTitle + "</b>\n")
             sessionDescription += workoutToString(workout)
         }
         let title = titleLabel.text != nil ? titleLabel.text! : "Training session"

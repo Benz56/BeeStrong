@@ -85,10 +85,4 @@ class GoogleSignInViewController: UIViewController {
             enableButton(signOutButton, false)
         }
     }
-    
-    /// GOOGLE CALENDAR INTEGRATION
-    
-    @IBAction func createEventButtonTapped(_ sender: Any) {
-        googleCalendarAPI.createTestEvent();
-    }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwO-dw-DIx">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FwO-dw-DIx">
     <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,7 +49,7 @@
                                     <segue destination="kZc-k3-a9i" kind="show" identifier="NewTrainingSession" id="ltH-4Q-PEu"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuv-pc-aaB" customClass="UpcomingSessionsUITableView" customModule="BeeStrong" customModuleProvider="target">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uuv-pc-aaB">
                                 <rect key="frame" x="20" y="590" width="388" height="233"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
@@ -89,6 +89,7 @@
                                         <connections>
                                             <outlet property="dateLabel" destination="YVn-DB-Skg" id="aTm-s0-s7x"/>
                                             <outlet property="workouts" destination="cEl-Tg-j54" id="nPU-RO-odm"/>
+                                            <segue destination="cqx-0G-IpH" kind="showDetail" identifier="goToDetailViewFromCalendar" id="mjf-hA-2Nm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -152,15 +153,15 @@
                                 <exclude reference="Edr-tI-f7k"/>
                                 <exclude reference="XIu-iN-rK4"/>
                                 <exclude reference="ahG-IJ-OAf"/>
-                                <exclude reference="G6z-bj-ZRf"/>
-                                <exclude reference="j0T-rV-Of9"/>
-                                <exclude reference="mKT-I7-qO9"/>
-                                <exclude reference="x2h-Qc-9Zz"/>
                                 <exclude reference="C74-D9-qIf"/>
                                 <exclude reference="TGW-RB-wAA"/>
                                 <exclude reference="ZTz-vg-nKq"/>
                                 <exclude reference="yMo-T4-SQV"/>
                                 <exclude reference="znK-GK-ip9"/>
+                                <exclude reference="G6z-bj-ZRf"/>
+                                <exclude reference="j0T-rV-Of9"/>
+                                <exclude reference="mKT-I7-qO9"/>
+                                <exclude reference="x2h-Qc-9Zz"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact-widthClass=regular">
@@ -186,12 +187,6 @@
                                 <exclude reference="U52-NP-dfM"/>
                                 <include reference="XIu-iN-rK4"/>
                                 <exclude reference="ahG-IJ-OAf"/>
-                                <exclude reference="G6z-bj-ZRf"/>
-                                <exclude reference="ZmR-o1-IPy"/>
-                                <exclude reference="j0T-rV-Of9"/>
-                                <include reference="mKT-I7-qO9"/>
-                                <exclude reference="pPt-i9-XXv"/>
-                                <include reference="x2h-Qc-9Zz"/>
                                 <exclude reference="C74-D9-qIf"/>
                                 <include reference="TGW-RB-wAA"/>
                                 <exclude reference="ZTz-vg-nKq"/>
@@ -199,6 +194,12 @@
                                 <exclude reference="o9p-FC-MJ8"/>
                                 <exclude reference="yMo-T4-SQV"/>
                                 <include reference="znK-GK-ip9"/>
+                                <exclude reference="G6z-bj-ZRf"/>
+                                <exclude reference="ZmR-o1-IPy"/>
+                                <exclude reference="j0T-rV-Of9"/>
+                                <include reference="mKT-I7-qO9"/>
+                                <exclude reference="pPt-i9-XXv"/>
+                                <include reference="x2h-Qc-9Zz"/>
                             </mask>
                         </variation>
                     </view>
@@ -212,6 +213,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZqN-lI-0z2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1021.2053571428571" y="53.623188405797109"/>
+        </scene>
+        <!--WorkoutDetails-->
+        <scene sceneID="OBu-L6-ZS6">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="WorkoutDetails" storyboardName="WorkoutDetails" id="cqx-0G-IpH" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="vqp-Y4-RDW"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5RT-AA-3MZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1021" y="474"/>
         </scene>
         <!--Create Training Session-->
         <scene sceneID="gT2-4l-Olb">

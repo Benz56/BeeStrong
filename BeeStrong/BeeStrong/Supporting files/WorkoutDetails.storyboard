@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pDZ-pu-zLg">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Training Session Detail View Controller-->
+        <scene sceneID="gXm-en-7lc">
+            <objects>
+                <viewController id="pDZ-pu-zLg" customClass="TrainingSessionDetailViewController" customModule="BeeStrong" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mCf-nv-IrK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="CrZ-Ms-040">
+                                <rect key="frame" x="20" y="58" width="166.5" height="77.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Training session" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k82-I0-mgW">
+                                        <rect key="frame" x="0.0" y="0.0" width="166.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DK-mh-iFR">
+                                        <rect key="frame" x="0.0" y="31.5" width="36" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Workouts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sm6-Pv-yNh">
+                                        <rect key="frame" x="0.0" y="57" width="78.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsMultipleSelection="YES" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E8s-pJ-WxT">
+                                <rect key="frame" x="0.0" y="144" width="414" height="661"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="hcJ-Lb-NdT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CrZ-Ms-040" firstAttribute="leading" secondItem="mCf-nv-IrK" secondAttribute="leadingMargin" id="AC6-S4-wlb"/>
+                            <constraint firstAttribute="trailing" secondItem="E8s-pJ-WxT" secondAttribute="trailing" id="Ke4-NZ-Mzn"/>
+                            <constraint firstItem="E8s-pJ-WxT" firstAttribute="leading" secondItem="mCf-nv-IrK" secondAttribute="leading" id="OfW-IZ-VKR"/>
+                            <constraint firstItem="CrZ-Ms-040" firstAttribute="top" secondItem="hcJ-Lb-NdT" secondAttribute="top" constant="14" id="VxW-VH-jsf"/>
+                            <constraint firstItem="hcJ-Lb-NdT" firstAttribute="bottom" secondItem="E8s-pJ-WxT" secondAttribute="bottom" constant="57" id="fj7-XV-pAk"/>
+                            <constraint firstItem="E8s-pJ-WxT" firstAttribute="top" secondItem="CrZ-Ms-040" secondAttribute="bottom" constant="8.5" id="fu6-mD-oV9"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="8cu-1y-cIz">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="P9G-5O-xD9">
+                            <connections>
+                                <action selector="onSaveWorkout:" destination="pDZ-pu-zLg" id="Wpl-W6-WSC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="dateLabel" destination="4DK-mh-iFR" id="5vy-hk-C02"/>
+                        <outlet property="titleLabel" destination="k82-I0-mgW" id="Wpl-aM-Ryf"/>
+                        <outlet property="workoutsTableView" destination="E8s-pJ-WxT" id="fxE-C6-XGu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ph2-gb-P2f" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1176.8115942028987" y="0.6696428571428571"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
