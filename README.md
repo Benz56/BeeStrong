@@ -50,9 +50,10 @@ Use at least two of the following:
 
 ### Get Started
 1. Clone the project
-2. Choose a simulator (iPhone 12 Pro Max is recommended. See N.B. at the bottom)
-3. Build and run the app
-4. To create a workout
+2. Open the BeeStrong.xcworkspace file in Xcode
+3. Choose a simulator (iPhone 12 Pro Max is recommended. See N.B. at the bottom)
+4. Build and run the app
+5. To create a workout
     * Navigate to Workouts
     * New Workout
     * Add Exercises
@@ -60,11 +61,11 @@ Use at least two of the following:
     * Save
     * Input title, sets, and reps
     * Save
-5. To plan a training session
+6. To plan a training session
     * Navigate to the calendar
     * New Training Session (Optionally select a date. Can be done later)
     * Input title, date, start time, end time, and select workouts
-6. During a training session
+7. During a training session
     * Navigate to the Home tab
     * Tap on an entry in the Upcoming Training Sessions
     * Tap exercises once you have completed them
