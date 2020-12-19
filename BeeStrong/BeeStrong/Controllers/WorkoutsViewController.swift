@@ -26,12 +26,16 @@ class WorkoutsViewController: UIViewController, UITableViewDelegate, UITableView
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return workouts?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "SavedWorkoutCell") as! SavedWorkoutTableViewCell
-        let workout = workouts?[indexPath.row]
+        let workout = workouts?[indexPath.section]
 
         cell.titleLabel.text = workout?.title
         cell.exercisesLabel.text = workout?.exercises?.array.map{e in e as! Exercise}.map{e in
