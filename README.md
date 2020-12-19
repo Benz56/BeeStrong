@@ -65,6 +65,7 @@ Use at least two of the following:
     * Navigate to the calendar
     * New Training Session (Optionally select a date. Can be done later)
     * Input title, date, start time, end time, and select workouts
+    * To login with Google we have created a test google account you are welcome to use: e-mail: _beestrong.app@gmail.com_ pw: _beestrong_
 7. During a training session
     * Navigate to the Home tab
     * Tap on an entry in the Upcoming Training Sessions
