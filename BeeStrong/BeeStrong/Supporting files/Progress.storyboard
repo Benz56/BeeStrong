@@ -30,7 +30,7 @@
                         <viewLayoutGuide key="safeArea" id="wJw-Ug-p8I"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Progress" id="frg-AM-ZAw"/>
+                    <tabBarItem key="tabBarItem" title="Progress" image="arrow.up.right" catalog="system" id="frg-AM-ZAw"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="pickerView" destination="irn-YN-lR8" id="tHl-LJ-1b2"/>
@@ -42,6 +42,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="arrow.up.right" catalog="system" width="128" height="112"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

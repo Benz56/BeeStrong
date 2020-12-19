@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvq-Ov-UVk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zvq-Ov-UVk">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -192,7 +192,7 @@
                             <constraint firstItem="kEB-08-crw" firstAttribute="top" secondItem="ehj-dn-4yf" secondAttribute="bottom" constant="20" id="xwV-Ze-cKg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="1zQ-hX-XaH"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="1zQ-hX-XaH"/>
                     <navigationItem key="navigationItem" id="aeE-HK-IpA"/>
                     <connections>
                         <outlet property="upcomingSessionsTableView" destination="O0M-8Q-uu6" id="6hE-Hq-dq9"/>
@@ -321,7 +321,7 @@ your training sessions to Google Calendar.</string>
                             <constraint firstItem="fcP-1h-kdb" firstAttribute="centerX" secondItem="aJj-LU-zES" secondAttribute="centerX" id="cZQ-y7-sg8"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Google Sign In" id="Xue-fH-xmk"/>
+                    <tabBarItem key="tabBarItem" title="Google Sign In" image="link" catalog="system" id="Xue-fH-xmk"/>
                     <connections>
                         <outlet property="signInButton" destination="mgs-Zl-ocI" id="ESZ-qk-H5b"/>
                         <outlet property="signOutButton" destination="sa2-0z-q4e" id="0f2-kI-Brs"/>
@@ -346,6 +346,8 @@ your training sessions to Google Calendar.</string>
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="link" catalog="system" width="128" height="122"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
