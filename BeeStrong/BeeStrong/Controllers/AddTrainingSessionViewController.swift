@@ -22,6 +22,7 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
     var date: Date?
     let googleCalendarAPI = GoogleCalendarAPI();
     let defaults = UserDefaults.standard
+    let tsManager = TrainingSessionsManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -99,9 +100,11 @@ class AddTrainingSessionViewController: UIViewController, UITableViewDelegate, U
             GIDSignIn.sharedInstance()?.signIn()
         }))
         inputAlert.addAction(UIAlertAction(title: "No", style: .default, handler: { (UIAlertAction) in
+            self.tsManager.add(for: self.getDate(timePicker: self.startTimePicker), for: self.getDate(timePicker: self.endTimePicker), with: workouts)
             _ = self.navigationController?.popViewController(animated: true)
         }))
         inputAlert.addAction(UIAlertAction(title: "Don't show again", style: .default, handler: { (UIAlertAction) in
+            self.tsManager.add(for: self.getDate(timePicker: self.startTimePicker), for: self.getDate(timePicker: self.endTimePicker), with: workouts)
             //Remember this setting in storage
             self.defaults.setValue(true, forKey: "dontShowAgain");
             _ = self.navigationController?.popViewController(animated: true)
